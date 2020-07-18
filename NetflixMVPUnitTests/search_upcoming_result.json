@@ -1,0 +1,401 @@
+{
+    "results": [
+        {
+            "popularity": 153.137,
+            "vote_count": 73,
+            "video": false,
+            "poster_path": "/goEW6QqoFxNI2pfbpVqmXj2WXwd.jpg",
+            "id": 531876,
+            "adult": false,
+            "backdrop_path": "/n1RohH2VoK1CdVI2fXvcP19dSlm.jpg",
+            "original_language": "en",
+            "original_title": "The Outpost",
+            "genre_ids": [
+                28,
+                18,
+                36,
+                10752
+            ],
+            "title": "The Outpost",
+            "vote_average": 7,
+            "overview": "A small unit of U.S. soldiers, alone at the remote Combat Outpost Keating, located deep in the valley of three mountains in Afghanistan, battles to defend against an overwhelming force of Taliban fighters in a coordinated attack. The Battle of Kamdesh, as it was known, was the bloodiest American engagement of the Afghan War in 2009 and Bravo Troop 3-61 CAV became one of the most decorated units of the 19-year conflict.",
+            "release_date": "2020-06-24"
+        },
+        {
+            "popularity": 72.875,
+            "vote_count": 26407,
+            "video": false,
+            "poster_path": "/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+            "id": 27205,
+            "adult": false,
+            "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+            "original_language": "en",
+            "original_title": "Inception",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "title": "Inception",
+            "vote_average": 8.3,
+            "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+            "release_date": "2010-07-15"
+        },
+        {
+            "popularity": 69.88,
+            "vote_count": 1182,
+            "video": false,
+            "poster_path": "/jHo2M1OiH9Re33jYtUQdfzPeUkx.jpg",
+            "id": 385103,
+            "adult": false,
+            "backdrop_path": "/fKtYXUhX5fxMxzQfyUcQW9Shik6.jpg",
+            "original_language": "en",
+            "original_title": "Scoob!",
+            "genre_ids": [
+                12,
+                16,
+                35,
+                9648,
+                10751
+            ],
+            "title": "Scoob!",
+            "vote_average": 8,
+            "overview": "In Scooby-Doo’s greatest adventure yet, see the never-before told story of how lifelong friends Scooby and Shaggy first met and how they joined forces with young detectives Fred, Velma, and Daphne to form the famous Mystery Inc. Now, with hundreds of cases solved, Scooby and the gang face their biggest, toughest mystery ever: an evil plot to unleash the ghost dog Cerberus upon the world. As they race to stop this global “dogpocalypse,” the gang discovers that Scooby has a secret legacy and an epic destiny greater than anyone ever imagined.",
+            "release_date": "2020-05-15"
+        },
+        {
+            "popularity": 54.808,
+            "vote_count": 1060,
+            "video": false,
+            "poster_path": "/wxPhn4ef1EAo5njxwBkAEVrlJJG.jpg",
+            "id": 514847,
+            "adult": false,
+            "backdrop_path": "/naXUDz0VGK7aaPlEpsuYW8kNVsr.jpg",
+            "original_language": "en",
+            "original_title": "The Hunt",
+            "genre_ids": [
+                28,
+                27,
+                53
+            ],
+            "title": "The Hunt",
+            "vote_average": 6.7,
+            "overview": "Twelve strangers wake up in a clearing. They don't know where they are—or how they got there. In the shadow of a dark internet conspiracy theory, ruthless elitists gather at a remote location to hunt humans for sport. But their master plan is about to be derailed when one of the hunted turns the tables on her pursuers.",
+            "release_date": "2020-03-11"
+        },
+        {
+            "popularity": 32.934,
+            "vote_count": 24,
+            "video": false,
+            "poster_path": "/aINpljdt3VVMrCLtJW4BektwYOp.jpg",
+            "id": 522098,
+            "adult": false,
+            "backdrop_path": "/cjAirCV9TyTQcp7mFNRnvgkoVFV.jpg",
+            "original_language": "en",
+            "original_title": "Babyteeth",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "title": "Babyteeth",
+            "vote_average": 5.5,
+            "overview": "A terminally ill teen upsets her parents when she falls in love with a small-time drug dealer.",
+            "release_date": "2020-06-18"
+        },
+        {
+            "popularity": 29.529,
+            "vote_count": 464,
+            "video": false,
+            "poster_path": "/myf3qzpeN0JbuFRPwSpJcz7rmAT.jpg",
+            "id": 458305,
+            "adult": false,
+            "backdrop_path": "/jZ4YdDCnfK4cO13do9J4JaT8d2O.jpg",
+            "original_language": "en",
+            "original_title": "Vivarium",
+            "genre_ids": [
+                27,
+                878,
+                53
+            ],
+            "title": "Vivarium",
+            "vote_average": 5.9,
+            "overview": "A young woman and her fiancé are in search of the perfect starter home. After following a mysterious real estate agent to a new housing development, the couple finds themselves trapped in a maze of identical houses and forced to raise an otherworldly child.",
+            "release_date": "2019-07-12"
+        },
+        {
+            "popularity": 28.017,
+            "vote_count": 54,
+            "video": false,
+            "poster_path": "/olXqJfzGgRHge9T0ZQRJr5dvqb5.jpg",
+            "id": 606679,
+            "adult": false,
+            "backdrop_path": "/aVX9a54YFmrcEHATubpuFQQKn5L.jpg",
+            "original_language": "en",
+            "original_title": "The High Note",
+            "genre_ids": [
+                35,
+                18,
+                10402,
+                10749
+            ],
+            "title": "The High Note",
+            "vote_average": 7.6,
+            "overview": "Set in the dazzling world of the LA music scene comes the story of Grace Davis, a superstar whose talent, and ego, have reached unbelievable heights. Maggie is Grace’s overworked personal assistant who’s stuck running errands, but still aspires to her childhood dream of becoming a music producer. When Grace’s manager presents her with a choice that could alter the course of her career, Maggie and Grace come up with a plan that could change their lives forever.",
+            "release_date": "2020-06-10"
+        },
+        {
+            "popularity": 15.982,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/27eA9xGba61LtKr7gJRnhtDDgEP.jpg",
+            "id": 651586,
+            "adult": false,
+            "backdrop_path": null,
+            "original_language": "es",
+            "original_title": "Superagente Makey",
+            "genre_ids": [
+                28,
+                35
+            ],
+            "title": "Superagente Makey",
+            "vote_average": 0,
+            "overview": "Makey is a humble police officer that, unexpectedly, gets caught in the middle of a dangerous international drug operation in the Costa del Sol, Spain.",
+            "release_date": "2020-07-17"
+        },
+        {
+            "popularity": 20.34,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/mHdxRpcJuajyYlHdkUP58xUIIl.jpg",
+            "id": 707214,
+            "adult": false,
+            "backdrop_path": "/9GoV8gwMxpI2OrFXtJuyP1xIJ89.jpg",
+            "original_language": "en",
+            "original_title": "The Clearing",
+            "genre_ids": [
+                27
+            ],
+            "title": "The Clearing",
+            "vote_average": 0,
+            "overview": "A father must battle his way through the zombie apocalypse to save his daughter.",
+            "release_date": "2020-07-18"
+        },
+        {
+            "popularity": 23.905,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/syBQHeRpWabNFXFXWJpgVbBDAbX.jpg",
+            "id": 625568,
+            "adult": false,
+            "backdrop_path": "/h20mNAq0B9v9tQGyKnLYUHxNPX0.jpg",
+            "original_language": "en",
+            "original_title": "Unhinged",
+            "genre_ids": [
+                53
+            ],
+            "title": "Unhinged",
+            "vote_average": 0,
+            "overview": "A case of road rage turns into full-blown terror when an unstable driver follows a woman and her son.",
+            "release_date": "2020-07-16"
+        },
+        {
+            "popularity": 30.425,
+            "vote_count": 319,
+            "video": false,
+            "poster_path": "/vkwgzCBBiY3C1XEy0WakYfMOvnG.jpg",
+            "id": 548473,
+            "adult": false,
+            "backdrop_path": "/iyn2JQsftaqhQlXYaCCvn8udM5i.jpg",
+            "original_language": "en",
+            "original_title": "Color Out of Space",
+            "genre_ids": [
+                27,
+                878
+            ],
+            "title": "Color Out of Space",
+            "vote_average": 6.1,
+            "overview": "The Gardner family moves to a remote farmstead in rural New England to escape the hustle of the 21st century. They are busy adapting to their new life when a meteorite crashes into their front yard, melts into the earth, and infects both the land and the properties of space-time with a strange, otherworldly colour. To their horror, the family discovers this alien force is gradually mutating every life form that it touches—including them.",
+            "release_date": "2020-01-24"
+        },
+        {
+            "popularity": 19.462,
+            "vote_count": 21,
+            "video": false,
+            "poster_path": "/9HMxF8jpRGsOIlPJkrK4UIM1LFU.jpg",
+            "id": 571655,
+            "adult": false,
+            "backdrop_path": "/fKgGEF84QEjGLGfPdfOgSt8I1BP.jpg",
+            "original_language": "da",
+            "original_title": "Valhalla",
+            "genre_ids": [
+                12,
+                14,
+                878,
+                53
+            ],
+            "title": "Valhalla",
+            "vote_average": 5.7,
+            "overview": "The Viking children Røskva and Tjalfe embark on an adventurous journey from Midgard to Valhalla with the gods Thor and Loki. Life in Valhalla, however, turns out to be threatened by the dreaded Fenrir wolf and the god's barbaric archenemies, the Jotnar. Side by side with the gods the two children must fight to save Valhalla from the end of the world - Ragnarok.",
+            "release_date": "2019-10-10"
+        },
+        {
+            "popularity": 27.941,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/zQFjMmE3K9AX5QrBL1SXIxYQ9jz.jpg",
+            "id": 579583,
+            "adult": false,
+            "backdrop_path": "/5rwcd24GGltKiqdPT4G2dmchLr9.jpg",
+            "original_language": "en",
+            "original_title": "The King of Staten Island",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "title": "The King of Staten Island",
+            "vote_average": 0,
+            "overview": "Scott has been a case of arrested development ever since his firefighter father died when he was seven. He’s now reached his mid-20s having achieved little, chasing a dream of becoming a tattoo artist that seems far out of reach. As his ambitious younger sister heads off to college, Scott is still living with his exhausted ER nurse mother and spends his days smoking weed, hanging with the guys — Oscar, Igor and Richie — and secretly hooking up with his childhood friend Kelsey. But when his mother starts dating a loudmouth firefighter named Ray, it sets off a chain of events that will force Scott to grapple with his grief and take his first tentative steps toward moving forward in life.",
+            "release_date": "2020-07-22"
+        },
+        {
+            "popularity": 21.852,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg",
+            "id": 577922,
+            "adult": false,
+            "backdrop_path": "/6TB7E8xvlCqAWqPdS2fPkdvCVM5.jpg",
+            "original_language": "en",
+            "original_title": "Tenet",
+            "genre_ids": [
+                28,
+                53
+            ],
+            "title": "Tenet",
+            "vote_average": 0,
+            "overview": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+            "release_date": "2020-07-30"
+        },
+        {
+            "popularity": 21.804,
+            "vote_count": 536,
+            "video": false,
+            "poster_path": "/4w1ItwCJCTtSi9nPfJC1vU6NIVg.jpg",
+            "id": 413518,
+            "adult": false,
+            "backdrop_path": "/AdqOBPw4PdtzOcfEuQuZ8MNeTKb.jpg",
+            "original_language": "it",
+            "original_title": "Pinocchio",
+            "genre_ids": [
+                12,
+                18,
+                14,
+                10751
+            ],
+            "title": "Pinocchio",
+            "vote_average": 6.9,
+            "overview": "Live-action adaptation of the classic story of a wooden puppet named Pinocchio who comes to life.",
+            "release_date": "2019-12-19"
+        },
+        {
+            "popularity": 24.686,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/7S9RvfMBWSTlUZ4VbxDY7oLeenk.jpg",
+            "id": 581392,
+            "adult": false,
+            "backdrop_path": "/oamFZb8Gj5NJ24OLDd07wyNVX4N.jpg",
+            "original_language": "ko",
+            "original_title": "반도",
+            "genre_ids": [
+                28,
+                27,
+                53
+            ],
+            "title": "Train to Busan Presents: Peninsula",
+            "vote_average": 0,
+            "overview": "Peninsula takes place four years after Train to Busan as the characters fight to escape the land that is in ruins due to an unprecedented disaster.",
+            "release_date": "2020-07-15"
+        },
+        {
+            "popularity": 27.901,
+            "vote_count": 676,
+            "video": false,
+            "poster_path": "/911kntXCM3WiHYcQDIJ4wZZ9CJx.jpg",
+            "id": 399121,
+            "adult": false,
+            "backdrop_path": "/jArl1j9sL2mYjRW23EaZKWAr2E8.jpg",
+            "original_language": "fr",
+            "original_title": "J’accuse",
+            "genre_ids": [
+                18,
+                36,
+                53
+            ],
+            "title": "An Officer and a Spy",
+            "vote_average": 7.2,
+            "overview": "In 1894, French Captain Alfred Dreyfus is wrongfully convicted of treason and sentenced to life imprisonment at Devil's Island.",
+            "release_date": "2019-09-30"
+        },
+        {
+            "popularity": 18.881,
+            "vote_count": 23,
+            "video": false,
+            "poster_path": "/gKwXP1VvKNxrc1400yksKA4D9Qc.jpg",
+            "id": 617784,
+            "adult": false,
+            "backdrop_path": "/7JtmcZiLrWPWESu0mZJlTaiH20E.jpg",
+            "original_language": "en",
+            "original_title": "Military Wives",
+            "genre_ids": [
+                18
+            ],
+            "title": "Military Wives",
+            "vote_average": 7,
+            "overview": "Inspired by global phenomenon of military wives choirs, the story celebrates a band of misfit women who form a choir on a military base. As unexpected bonds of friendship flourish, music and laughter transform their lives, helping each other to overcome their fears for loved ones in combat.",
+            "release_date": "2020-03-06"
+        },
+        {
+            "popularity": 16.004,
+            "vote_count": 0,
+            "video": false,
+            "poster_path": "/v8iAGN4iJIAZbWsCMePjrbn3Iq2.jpg",
+            "id": 703745,
+            "adult": false,
+            "backdrop_path": "/j7ghPSkRBFUwVDHkrRfKnOSaKHY.jpg",
+            "original_language": "en",
+            "original_title": "Deep Blue Sea 3",
+            "genre_ids": [],
+            "title": "Deep Blue Sea 3",
+            "vote_average": 0,
+            "overview": "Dr. Emma Collins and her team are spending their third summer on the island of Little Happy studying the effect of climate change on the great white sharks who come to the nearby nursery every year to give birth. Along with the last two inhabitants of this former fishing village, their peaceful life is disrupted when a \"scientific\" team led by her ex-boyfriend and marine biologist Richard show up looking for three bull sharks who we soon learn aren't just any bull sharks.",
+            "release_date": "2020-07-28"
+        },
+        {
+            "popularity": 23.313,
+            "vote_count": 481,
+            "video": false,
+            "poster_path": "/eqTjO8yTaPRSKWj7i6Qnr7R5cls.jpg",
+            "id": 418879,
+            "adult": false,
+            "backdrop_path": "/jypNy38bThNz4K6IWDoE7h0xlP2.jpg",
+            "original_language": "en",
+            "original_title": "The Current War",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "title": "The Current War",
+            "vote_average": 6.7,
+            "overview": "Electricity titans Thomas Edison and George Westinghouse compete to create a sustainable system and market it to the American people",
+            "release_date": "2019-07-18"
+        }
+    ],
+    "page": 1,
+    "total_results": 125,
+    "dates": {
+        "maximum": "2020-08-03",
+        "minimum": "2020-07-17"
+    },
+    "total_pages": 7
+}
