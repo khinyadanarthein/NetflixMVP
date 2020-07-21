@@ -15,6 +15,12 @@ open class BaseApiClient {
 
     static let BASE_URL =  "https://api.themoviedb.org/3/"
     
+    public var session : Session!
+    
+    public func setNetworkClient(session : Session) {
+        self.session = session
+    }
+    
     func reuqestApiWithHeaders<T>(
         url:String,
         method:HTTPMethod,
@@ -29,7 +35,7 @@ open class BaseApiClient {
         return Observable<T>.create { (observer) -> Disposable in
             
             let main_url = BaseApiClient.BASE_URL + url
-            let request = AF.request( main_url , method: method, parameters: params, encoding: encoding ,  headers : headers)
+            let request = self.session.request( main_url , method: method, parameters: params, encoding: encoding ,  headers : headers)
                 .responseJSON{ response in
                     
                     

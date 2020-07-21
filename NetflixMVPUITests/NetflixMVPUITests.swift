@@ -7,21 +7,9 @@
 //
 
 import XCTest
+@testable import NetflixMVP
 
 class NetflixMVPUITests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
     func testExample() {
         // UI tests must launch the application that they test.
@@ -39,5 +27,28 @@ class NetflixMVPUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    
+    // First Time Login
+    func test_go_to_login_page_success() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        // Navigate to Login Page
+        app.buttons["Profile"].tap()
+        
+        //Instantiate storyboard
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        XCTAssertNotNil(storyboard, "Target storyboard should be present")
+         //Instantiate viewcontroller
+//        let viewcontroller = storyboard.instantiateViewController(identifier:
+//        "LoginViewController") as? LoginViewController
+        //Assert that viewcontroller is fully loaded
+//        XCTAssertNotNil(viewcontroller, "Viewcontroller should be present")
+                
+        let loginID = app.otherElements.textFields["User Name"]
+        loginID.tap()
+        loginID.typeText("JuJue_KYT")
+        
     }
 }

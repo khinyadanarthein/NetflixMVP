@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import UIKit
+@testable import NetflixMVP
+
+class MockSearchPresenterImpl : MovieSearchPresenter {
+    
+    var movieList: [SearchMovieVO] = []
+    
+    func onUIReady(movieName: String) {
+        
+    }
+    
+    func attachView(view: MovieSearchView) {
+        
+    }
+    
+    func deattachView() {
+        
+    }
+    
+    
+}

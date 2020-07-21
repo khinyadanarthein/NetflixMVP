@@ -9,12 +9,14 @@
 import Foundation
 import RxSwift
 import Alamofire
+import Mocker
 
 class MovieApiClient: BaseApiClient {
     
     static let shared:MovieApiClient = MovieApiClient()
     
     private override init() {}
+    
 }
 
 
