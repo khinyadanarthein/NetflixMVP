@@ -14,4 +14,5 @@ protocol MovieSearchView {
     func hideLoading()
     func showErrorMessage(err:String)
     func showMovieList(data: [SearchMovieVO])
+    func navigateToMovieDetail(movie : MovieDetailVO)
 }

@@ -14,5 +14,6 @@ protocol MovieSearchPresenter {
     func onUIReady(movieName : String)
     func attachView(view:MovieSearchView)
     func deattachView()
+    func onTapMovie(data : SearchMovieVO)
     
 }

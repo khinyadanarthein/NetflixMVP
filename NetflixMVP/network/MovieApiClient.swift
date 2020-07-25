@@ -21,7 +21,7 @@ class MovieApiClient: BaseApiClient {
 
 
 extension MovieApiClient : MovieApi {
-     
+
     func getMovies(status: String) -> Observable<GetAllMoviesResponse> {
         
         var url = API_GET_MOVIE

@@ -23,7 +23,7 @@ class DataModelImpl: DataModel {
 //        db.getNowShowingMovies()
 //
 //    }
-
+    
     func getMoviesFromAPI(status: String) {
         _ = api.getMovies(status: status)
             .flatMap{self.db.saveAllMovies(data: $0.results, status: status)}

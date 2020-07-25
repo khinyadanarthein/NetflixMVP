@@ -26,5 +26,7 @@ class MockSearchPresenterImpl : MovieSearchPresenter {
         
     }
     
-    
+    func onTapMovie(data: SearchMovieVO) {
+        
+    }
 }

@@ -42,12 +42,12 @@ class NetflixMVPUnitTests: XCTestCase {
         let originalURL = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=cc61c73fdd787cda0cdf930eb5b2528b&query=")!
         
         let mock = Mock(url: originalURL, dataType: .json, statusCode: 200, data: [Mock.HTTPMethod.get : data])
-        //let mock = Mock(url: originalURL, contentType: .json, statusCode: 200, data: [.get : data])// Data containing the JSON response
         mock.register()
         
         let searchUpcomingMovieExpectation = expectation(description: "search upcoming movie")
         
         MovieApiClient.shared.setNetworkClient(session: sessionManager)
+        
         MovieApiClient.shared.searchMovies(movieName: "avator")
             .observeOn(MainScheduler.instance)
             .subscribe(onNext:{ data in
@@ -66,22 +66,22 @@ class NetflixMVPUnitTests: XCTestCase {
     
     func test_search_movie_success() {
 //        let model = MockDataModelImpl.shared
-//        
+//
 //        let searchMovieExpectation = expectation(description: "search movies")
-//        
+//
 //        model.searchMovie(movieName: "call")
 //        .observeOn(MainScheduler.instance)
 //        .subscribe(onNext:{ data in
 //            print("search list \(data.count)")
 //            XCTAssertNil(data)
 //            searchMovieExpectation.fulfill()
-//            
+//
 //        },onError:{ error in
 //           XCTAssertTrue(true)
 //           searchMovieExpectation.fulfill()
-//            
+//
 //        }).disposed(by: bag)
-//        
+//
 //        //Wait for expectation
 //        waitForExpectations(timeout: 5, handler: nil)
     }

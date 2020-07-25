@@ -108,6 +108,9 @@ extension ProfileViewController : ProfileView {
         self.collectionViewWatchList.reloadData()
     }
 
+    func navigateToMovieDetail(movie: MovieDetailVO) {
+        self.navigateToDetail(movie: movie)
+    }
 }
 
 extension ProfileViewController : UICollectionViewDataSource {
@@ -151,4 +154,12 @@ extension ProfileViewController : UICollectionViewDelegate, UICollectionViewDele
         return CGSize(width: 130, height: 180)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.collectionViewRateList {
+            self.mPresenter.onTapMovie(movieId : self.mPresenter.ratedMovieList[indexPath.row].id)
+        }
+        if collectionView == self.collectionViewWatchList {
+            self.mPresenter.onTapMovie(movieId: self.mPresenter.watchedMovieList[indexPath.row].id)
+        }
+    }
 }

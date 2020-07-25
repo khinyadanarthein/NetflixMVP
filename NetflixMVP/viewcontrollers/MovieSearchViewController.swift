@@ -92,6 +92,15 @@ extension MovieSearchViewController : MovieSearchView {
         self.collectionViewMovieResult.reloadData()
     }
     
+    func navigateToMovieDetail(movie: MovieDetailVO) {
+        let vc = mainStoryBoard.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
+        if let vc = vc {
+            vc.movie = movie
+            print("movie id \(movie.id)")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }
 
 extension MovieSearchViewController : UICollectionViewDataSource{
@@ -110,5 +119,12 @@ extension MovieSearchViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = ((self.view.frame.size.width - 20) / 3) - 10
         return CGSize(width: width, height: 200)
+    }
+}
+
+extension MovieSearchViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.mPresenter.onTapMovie(data: self.mPresenter.movieList[indexPath.row])
     }
 }

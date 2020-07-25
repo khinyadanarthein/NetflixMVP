@@ -9,11 +9,13 @@
 import Foundation
 
 class SearchMovieVO: Codable {
+    let id : Int?
     let title : String?
     let posterPath : String?
     let overview : String?
     
     enum CodingKeys : String, CodingKey{
+        case id = "id"
         case title = "title"
         case posterPath = "poster_path"
         case overview = "overview"

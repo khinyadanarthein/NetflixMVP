@@ -16,5 +16,6 @@ protocol ProfilePresenter {
     func onUIReady()
     func attachView(view:ProfileView)
     func deattachView()
+    func onTapMovie(movieId : Int)
     
 }

@@ -15,7 +15,7 @@ open class BaseApiClient {
 
     static let BASE_URL =  "https://api.themoviedb.org/3/"
     
-    public var session : Session!
+    public var session : Session = AF
     
     public func setNetworkClient(session : Session) {
         self.session = session

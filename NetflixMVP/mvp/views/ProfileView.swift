@@ -16,4 +16,5 @@ protocol ProfileView {
     func showAccountDetail(data:AccountDetailResponse)
     func showRatedMovies(data:[RateMovieVO])
     func showWatchedMovies(data:[WatchMovieVO])
+    func navigateToMovieDetail(movie : MovieDetailVO)
 }

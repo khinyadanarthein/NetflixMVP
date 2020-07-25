@@ -41,5 +41,22 @@ class MovieSearchPresenterImpl : MovieSearchPresenter {
         self.mView = nil
     }
     
-    
+    func onTapMovie(data: SearchMovieVO) {
+        model.getMovieDetail(id: data.id!, success: { (data) in
+            self.mView?.navigateToMovieDetail(movie: data)
+            
+        }) { (error) in
+            self.mView?.hideLoading()
+            //self.mView?.showErrorMessage(err: error)
+            
+            let movieDetail = MovieDetailVO()
+            movieDetail.id = UserDefaultUtil.shared.retrieveMovieId()
+            movieDetail.posterPath = UserDefaultUtil.shared.retrieveMoviePoster()
+            movieDetail.adult = UserDefaultUtil.shared.retrieveMovieIsAdult()
+            movieDetail.backdropPath = UserDefaultUtil.shared.retrieveMoviePoster()
+            movieDetail.releaseDate = UserDefaultUtil.shared.retrieveMovieDate()
+            movieDetail.overview = UserDefaultUtil.shared.retrieveMovieOverview()
+            self.mView?.navigateToMovieDetail(movie: movieDetail)
+        }
+    }
 }
