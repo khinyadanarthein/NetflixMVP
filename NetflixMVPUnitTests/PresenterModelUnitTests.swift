@@ -311,4 +311,72 @@ class ModelLayerUnitTests: XCTestCase {
             }).disposed(by: bag)
         waitForExpectations(timeout: 5, handler: nil)
     }
+    
+    func test_home_upcoming_list_init_success() {
+        
+       let modelExpectation = expectation(description: "upcoming list init")
+        model.getUpcomingMoviesFromAPI(page: 1)
+        model.getUpcomingMovies()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext:{ data in
+            XCTAssertNotEqual(data.count, 0)
+                modelExpectation.fulfill()
+                
+            },onError:{ error in
+                XCTAssertNil(error)
+                
+            }).disposed(by: bag)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func test_home_trending_list_init_success() {
+        
+       let modelExpectation = expectation(description: "trending list init")
+        model.getTrendingMoviesFromAPI(page: 1)
+        model.getTrendingMovies()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext:{ data in
+            XCTAssertNotEqual(data.count, 0)
+                modelExpectation.fulfill()
+                
+            },onError:{ error in
+                XCTAssertNil(error)
+                
+            }).disposed(by: bag)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func test_home_now_playing_list_init_success() {
+        
+       let modelExpectation = expectation(description: "now playing list init")
+        model.getNowPlayingMoviesFromAPI(page: 1)
+        model.getNowPlayingMovies()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext:{ data in
+            XCTAssertNotEqual(data.count, 0)
+                modelExpectation.fulfill()
+                
+            },onError:{ error in
+                XCTAssertNil(error)
+                
+            }).disposed(by: bag)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func test_home_top_rated_list_init_success() {
+        
+       let modelExpectation = expectation(description: "top rated list init")
+        model.getTopRatedMoviesFromAPI(page: 1)
+        model.getTopRatedMovies()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext:{ data in
+                XCTAssertNotEqual(data.count, 0)
+                modelExpectation.fulfill()
+                
+            },onError:{ error in
+                XCTAssertNil(error)
+                
+            }).disposed(by: bag)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
