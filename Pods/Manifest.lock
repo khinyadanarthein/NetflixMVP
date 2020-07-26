@@ -3,6 +3,7 @@ PODS:
   - Kingfisher (5.13.1):
     - Kingfisher/Core (= 5.13.1)
   - Kingfisher/Core (5.13.1)
+  - Mocker (2.2.0)
   - netfox (1.19.0)
   - Realm (4.3.2):
     - Realm/Headers (= 4.3.2)
@@ -24,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - Mocker
   - netfox
   - RealmSwift
   - RxCocoa
@@ -36,6 +38,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - Mocker
     - netfox
     - Realm
     - RealmSwift
@@ -49,6 +52,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 41c162d645ba6a78e7fd030fcdaf6aa394ca39a0
   Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
+  Mocker: d0ceb340eddd5c28539a691ce67d068674cef9a0
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
   Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
   RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
@@ -59,6 +63,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
 
-PODFILE CHECKSUM: 9721593dde56d7cef455ee956360dbb96b9c49df
+PODFILE CHECKSUM: 6ca48bb37d1aa997802178b79f64f03b665f1236
 
 COCOAPODS: 1.8.4

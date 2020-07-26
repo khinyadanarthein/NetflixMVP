@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 @testable import NetflixMVP
 
-class MockDataModelImpl : DataModel {
+class MockDataModelImpl {
     
     static let shared:MockDataModelImpl = MockDataModelImpl()
     let api:MovieApi = MovieApiClient.shared
@@ -151,8 +151,8 @@ class MockDataModelImpl : DataModel {
     }
     
     //========================= LOGIN =========================//
-    func requestToken(success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
-        api.requestToken(success: { (data) in
+    func requestToken(apiKey: String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
+        api.requestToken(apiKey: apiKey,success: { (data) in
             
             UserDefaultUtil.shared.saveToken(token: data.requestToken)
             success(data)

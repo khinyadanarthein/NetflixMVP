@@ -127,9 +127,9 @@ class DataModelImpl: DataModel {
         api.addMovieToRated(id: id, sessionId: sessionId, success: { (data) in
             if data.statusCode == 12 {
                 success(data.statusMessage)
+            } else {
+                fail(data.statusMessage)
             }
-            fail(data.statusMessage)
-            
         }) { (error) in
             fail(error)
         }
@@ -159,8 +159,8 @@ class DataModelImpl: DataModel {
     }
     
     //========================= LOGIN =========================//
-    func requestToken(success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
-        api.requestToken(success: { (data) in
+    func requestToken(apiKey: String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
+        api.requestToken(apiKey : apiKey, success: { (data) in
             
             UserDefaultUtil.shared.saveToken(token: data.requestToken)
             success(data)
@@ -198,8 +198,8 @@ class DataModelImpl: DataModel {
     }
     
     //========================= Profile =========================//
-    func getAccoundtDetail(success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void) {
-        api.getAccount(sessionId: UserDefaultUtil.shared.retrieveSessionID(), success: { (data) in
+    func getAccoundtDetail(sessionId: String,success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void) {
+        api.getAccount(sessionId: sessionId, success: { (data) in
             UserDefaultUtil.shared.saveUserId(userId: data.id)
             UserDefaultUtil.shared.saveUserName(userName: data.username)
             success(data)
@@ -217,13 +217,13 @@ class DataModelImpl: DataModel {
 //            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
         
    // }
-    func getRatedMovies() {
-        _ = api.getRateMovies(sessionId: UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
+    func getRatedMovies(sessionId: String, accountId : String) {
+        _ = api.getRateMovies(sessionId: sessionId, accountId: accountId)
             .flatMap{self.db.saveRatedMovies(data: $0.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
-    func getWatchMovies() {
-        _ = api.getWatchMovies(sessionId: UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
+    func getWatchMovies(sessionId: String, accountId : String) {
+        _ = api.getWatchMovies(sessionId: sessionId, accountId: accountId)
             .flatMap{self.db.saveWatchedMovies(data: $0.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }

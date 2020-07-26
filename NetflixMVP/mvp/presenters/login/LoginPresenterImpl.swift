@@ -23,7 +23,7 @@ class LoginPresenterImpl : LoginPresenter {
         userName = UserDefaultUtil.shared.retrieveUserName()
         password = UserDefaultUtil.shared.retrievePassword()
         
-        model.requestToken(success: { (requestToken) in
+        model.requestToken(apiKey : API_KEY ,success: { (requestToken) in
             self.mView?.hideLoading()
             self.token = requestToken.requestToken
             UserDefaultUtil.shared.saveToken(token: requestToken.requestToken)

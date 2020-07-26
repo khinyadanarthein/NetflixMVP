@@ -1,0 +1,100 @@
+{
+    "page": 1,
+    "total_results": 5,
+    "total_pages": 1,
+    "results": [
+        {
+            "popularity": 11.017,
+            "vote_count": 189,
+            "video": false,
+            "poster_path": "/sQjlrj2oTnGxbc3yKbYeWlJrhdp.jpg",
+            "id": 368940,
+            "adult": false,
+            "backdrop_path": "/yo9YjHDAlhLgHhP4b49Tahc450r.jpg",
+            "original_language": "de",
+            "original_title": "Robinson Crusoe: The Wild Life",
+            "genre_ids": [
+                12,
+                16,
+                35,
+                10751
+            ],
+            "title": "Robinson Crusoe: The Wild Life",
+            "vote_average": 5.6,
+            "overview": "On a tiny exotic island, Tuesday, an outgoing parrot lives with his quirky animal friends in paradise. However, Tuesday can't stop dreaming about discovering the world. After a violent storm, Tuesday and his friends wake up to find a strange creature on the beach: Robinson Crusoe. Tuesday immediately views Crusoe as his ticket off the island to explore new lands. Likewise, Crusoe soon realizes that the key to surviving on the island is through the help of Tuesday and the other animals. It isn't always easy at first, as the animals don't speak \"human.\" Slowly but surely, they all start living together in harmony, until one day, when their comfortable life is overturned by two savage cats, who wish to take control of the island. A battle ensues between the cats and the group of friends but Crusoe and the animals soon discover the true power of friendship up against all odds (even savage cats).",
+            "release_date": "2016-02-04"
+        },
+        {
+            "popularity": 3.84,
+            "vote_count": 28,
+            "video": false,
+            "poster_path": "/w7Iie9bFahDJVQ7AeKL6vMOz1VT.jpg",
+            "id": 38980,
+            "adult": false,
+            "backdrop_path": null,
+            "original_language": "en",
+            "original_title": "The Wild Life",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "title": "The Wild Life",
+            "vote_average": 6.5,
+            "overview": "Eighties teen romp involving Bill and his new apartment, Jim and his rebellious antics, Tom and his crazy self, and Anita with her older man David.",
+            "release_date": "1984-09-28"
+        },
+        {
+            "popularity": 0.6,
+            "id": 486467,
+            "video": false,
+            "vote_count": 0,
+            "vote_average": 0,
+            "title": "The New Wild: Life in the Abandoned Lands",
+            "release_date": "2017-11-26",
+            "original_language": "en",
+            "original_title": "The New Wild: Life in the Abandoned Lands",
+            "genre_ids": [],
+            "backdrop_path": null,
+            "adult": false,
+            "overview": "In an abandoned valley, one village's precarious attempt to survive offers a series of reflections on our changing relationship with the countryside and as such with the natural world itself.",
+            "poster_path": "/awxW17I3z462Jp74FQiBcryeR66.jpg"
+        },
+        {
+            "popularity": 0.6,
+            "vote_count": 1,
+            "video": false,
+            "poster_path": null,
+            "id": 159990,
+            "adult": false,
+            "backdrop_path": null,
+            "original_language": "en",
+            "original_title": "Running Wild: The Life of Dayton O. Hyde",
+            "genre_ids": [
+                99
+            ],
+            "title": "Running Wild: The Life of Dayton O. Hyde",
+            "vote_average": 7,
+            "overview": "Dayton Hyde’s destiny leads him on a dramatic journey through the West, from rodeos, conservation battles, and wild horse rescues to award-winning books, personal heartbreak and new-found love.",
+            "release_date": "2013-10-04"
+        },
+        {
+            "popularity": 4.094,
+            "id": 9579,
+            "video": false,
+            "vote_count": 37,
+            "vote_average": 6,
+            "title": "The Wild Chicks and Life",
+            "release_date": "2009-01-29",
+            "original_language": "de",
+            "original_title": "Die Wilden Hühner und das Leben",
+            "genre_ids": [
+                35,
+                10751
+            ],
+            "backdrop_path": "/AgNiLdDapPblhWupe6jhQ5eds6u.jpg",
+            "adult": false,
+            "overview": "The main protagonists are four – later five – girls: Sprotte (Charlotte), who is the spunky yet friendly main narrator, her best friend Frieda, a level-headed girl who is a member of Terre des hommes, shy and bespectacled Trude, who is unsure because of her obesity, and her best friend, the beautiful, shallow and vain, yet amicable Melanie. Later, they are joined by Wilma, a tough boys-hating tomboy, who is later revealed as a lesbian.",
+            "poster_path": "/kzNf6XCHSphbgVZDsZgIokPRe3N.jpg"
+        }
+    ]
+}

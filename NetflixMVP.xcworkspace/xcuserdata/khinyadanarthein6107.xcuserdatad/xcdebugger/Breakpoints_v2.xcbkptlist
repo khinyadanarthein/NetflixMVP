@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0FF7958C-FD0F-46F4-A75E-332F0021D513"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetflixMVP/network/BaseApiClient.swift"
@@ -912,7 +912,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "192"
             endingLineNumber = "192"
-            landmarkName = "requestToken(success:fail:)"
+            landmarkName = "requestToken(apiKey:success:fail:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -928,7 +928,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "197"
             endingLineNumber = "197"
-            landmarkName = "requestToken(success:fail:)"
+            landmarkName = "requestToken(apiKey:success:fail:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1076,33 +1076,33 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3D7975F3-89FA-444E-8C1F-812C4BBD6175 - 4627d9975e5eb389"
+                  uuid = "3D7975F3-89FA-444E-8C1F-812C4BBD6175 - 26cfb680a73350f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "NetflixMVP.DataModelImpl.addMovieToWatchedList(id: Swift.Int, sessionId: Swift.String, success: (Swift.String) -&gt; (), fail: (Swift.String) -&gt; ()) -&gt; ()"
+                  symbolName = "NetflixMVP.DataModelImpl.addMovieToWatchedList(userId: Swift.Int, movieId: Swift.Int, sessionId: Swift.String, success: (Swift.String) -&gt; (), fail: (Swift.String) -&gt; ()) -&gt; ()"
                   moduleName = "NetflixMVP"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/NetflixMVP/NetflixMVP/data/models/DataModelImpl.swift"
+                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/netflix-mvp-testing/NetflixMVP/data/models/DataModelImpl.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "97">
                </Location>
                <Location
-                  uuid = "3D7975F3-89FA-444E-8C1F-812C4BBD6175 - 93cfb66454b9f465"
+                  uuid = "3D7975F3-89FA-444E-8C1F-812C4BBD6175 - e44c796cd0797e4f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (NetflixMVP.UpdateResponse) -&gt; () in NetflixMVP.DataModelImpl.addMovieToWatchedList(id: Swift.Int, sessionId: Swift.String, success: (Swift.String) -&gt; (), fail: (Swift.String) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (NetflixMVP.UpdateResponse) -&gt; () in NetflixMVP.DataModelImpl.addMovieToWatchedList(userId: Swift.Int, movieId: Swift.Int, sessionId: Swift.String, success: (Swift.String) -&gt; (), fail: (Swift.String) -&gt; ()) -&gt; ()"
                   moduleName = "NetflixMVP"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/NetflixMVP/NetflixMVP/data/models/DataModelImpl.swift"
+                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/netflix-mvp-testing/NetflixMVP/data/models/DataModelImpl.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
                   offsetFromSymbolStart = "144">
                </Location>
             </Locations>
@@ -1112,7 +1112,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F1EABBB5-1F8B-4863-8708-05A72E3F3BF8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetflixMVP/mvp/presenters/detail/MovieDetailPresenterImpl.swift"
@@ -1138,6 +1138,38 @@
             endingLineNumber = "71"
             landmarkName = "addWatchMovie(movieId:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A170BCA4-EAB4-4708-81EC-787862E4B37C - 900bd9ed9a7af9f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in NetflixMVP.MovieDetailPresenterImpl.addWatchMovie(movieId: Swift.Int) -&gt; ()"
+                  moduleName = "NetflixMVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/netflix-mvp-testing/NetflixMVP/mvp/presenters/detail/MovieDetailPresenterImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "A170BCA4-EAB4-4708-81EC-787862E4B37C - d695463dc23257f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in NetflixMVP.MovieDetailPresenterImpl.addWatchMovie(movieId: Swift.Int) -&gt; ()"
+                  moduleName = "NetflixMVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khinyadanarthein6107/Desktop/PADC/test%20project/assign%20project/netflix-mvp-testing/NetflixMVP/mvp/presenters/detail/MovieDetailPresenterImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1214,8 +1246,8 @@
             filePath = "NetflixMVP/network/MovieApiClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "getAccount(sessionId:success:fail:)"
             landmarkType = "7">
             <Locations>
@@ -1607,22 +1639,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D36970A5-753C-4A54-9D00-20A1A74A7395"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NetflixMVPUnitTests/NetflixMVPUnitTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "test_upcoming_list_success()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2AE2BFFE-7880-4458-93FB-21EF2D028027"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1640,7 +1656,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "90BCFD90-BE43-4AA5-BD15-79646BF55575"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetflixMVP/network/BaseApiClient.swift"
@@ -1655,22 +1671,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "516F791C-427C-4BF9-B211-9C2424E3D6EB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NetflixMVPUnitTests/NetflixMVPUnitTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "test_upcoming_list_success()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8C240761-CD8A-4457-B945-D3EA4E4F66DE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1678,9 +1678,9 @@
             filePath = "NetflixMVPUITests/NetflixMVPUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "test_add_watch_list_success()"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "add_watch_list_success()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1688,7 +1688,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8BB397EA-F6C4-43BF-8AE8-097903C8CC3A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetflixMVP/network/BaseApiClient.swift"
@@ -1720,7 +1720,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "507A47B4-BC0A-4BFA-BC0C-A773AE6F91B2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetflixMVP/network/BaseApiClient.swift"
@@ -1729,6 +1729,342 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADAAC3DE-5EB8-491F-A016-67549BD1F15B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "requestApiWithoutObservable(url:method:params:encoding:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0964E09-0941-44D5-AAB5-1BA3B479B84C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "requestApiWithoutObservable(url:method:params:encoding:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "380D8ABD-0A96-470B-B0D7-56D0BA019877"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/MovieApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "getMovieDetail(id:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2E3A5F9-DBB7-4532-B541-3F9F8C3F1A29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35C452FD-9FA2-4A34-A8B5-ED39D73A9D4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/NetflixMVPUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "test_top_rated_list_failed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFAD579B-E597-4175-A65F-6B1944337F95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/NetflixMVPUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "test_top_rated_list_failed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B054D952-9197-4640-9E1E-7F55C3B66890"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E103FCB-EEBF-4A5F-A5AC-426B6755CAC8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3998A87E-2C66-4D0B-A2A2-13A8A7BCD671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61781A63-34B0-4E5D-9027-2C1C0DF58CC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97B1D776-EB0F-4F2C-817F-A4C78C2B0706"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/BaseApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "reuqestApiWithHeaders(url:method:params:value:headers:encoding:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB8AF29F-033F-46CA-8DCF-3EA3AF97AD03"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/ModelLayerUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "test_movie_detail_get_similar_movies_no_data()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65B6CB1E-6276-4ADC-9423-4300E7F06905"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/ModelLayerUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "test_add_rated_movie_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7655380-EEA5-4DF5-80D8-E2702F6C1532"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/data/models/DataModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "addMovieToRatedList(id:sessionId:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29E45C88-26B9-45EE-8176-3CD41AAA8D31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/ModelLayerUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "test_add_rated_movie_success()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2A1F2EA-032E-4552-9F4F-5CB5D5C35287"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/data/models/DataModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "addMovieToWatchedList(userId:movieId:sessionId:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0DFEE79-6D2A-4EB3-9AC0-AFF94F5DF9EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/MovieApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "getRateMovies(sessionId:accountId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC4CFCC5-E742-4296-B0BA-0FFAF8D1B7A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/MovieApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "getRateMovies(sessionId:accountId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "741BDEF0-B9BC-41DF-B750-690C83C88C8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/network/MovieApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "getRateMovies(sessionId:accountId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39EA8369-FF7D-47EC-B84F-FD6820A31B2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVP/data/models/DataModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "getRatedMovies(sessionId:accountId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97F5B185-DE48-46D1-9B25-919DE3BC10DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetflixMVPUnitTests/PresenterModelUnitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "test_search_movie_no_data()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

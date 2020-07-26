@@ -34,7 +34,7 @@ class MovieListViewController: UIViewController {
         //self.delegate = self
         initIndicator()
         initView()
-        //initDataObservationMVP()
+        initDataObservationMVP()
     }
     
     fileprivate func initIndicator() {

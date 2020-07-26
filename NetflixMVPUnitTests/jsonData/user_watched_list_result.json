@@ -1,0 +1,145 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "id": 11,
+            "video": false,
+            "vote_count": 14025,
+            "vote_average": 8.2,
+            "title": "Star Wars",
+            "release_date": "1977-05-25",
+            "original_language": "en",
+            "original_title": "Star Wars",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "backdrop_path": "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+            "adult": false,
+            "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+            "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+            "popularity": 66.427
+        },
+        {
+            "id": 419704,
+            "video": false,
+            "vote_count": 3998,
+            "vote_average": 6.1,
+            "title": "Ad Astra",
+            "release_date": "2019-09-17",
+            "original_language": "en",
+            "original_title": "Ad Astra",
+            "genre_ids": [
+                18,
+                878
+            ],
+            "backdrop_path": "/AeDS2MKGFy6QcjgWbJBde0Ga6Hd.jpg",
+            "adult": false,
+            "overview": "The near future, a time when both hope and hardships drive humanity to look to the stars and beyond. While a mysterious phenomenon menaces to destroy life on planet Earth, astronaut Roy McBride undertakes a mission across the immensity of space and its many perils to uncover the truth about a lost expedition that decades before boldly faced emptiness and silence in search of the unknown.",
+            "poster_path": "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg",
+            "popularity": 143.913
+        },
+        {
+            "id": 496243,
+            "video": false,
+            "vote_count": 8507,
+            "vote_average": 8.5,
+            "title": "Parasite",
+            "release_date": "2019-05-30",
+            "original_language": "ko",
+            "original_title": "기생충",
+            "genre_ids": [
+                35,
+                18,
+                53
+            ],
+            "backdrop_path": "/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg",
+            "adult": false,
+            "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+            "poster_path": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+            "popularity": 78.018
+        },
+        {
+            "id": 481848,
+            "video": false,
+            "vote_count": 1612,
+            "vote_average": 7.5,
+            "title": "The Call of the Wild",
+            "release_date": "2020-02-19",
+            "original_language": "en",
+            "original_title": "The Call of the Wild",
+            "genre_ids": [
+                12,
+                18,
+                10751
+            ],
+            "backdrop_path": "/9sXHqZTet3Zg5tgcc0hCDo8Tn35.jpg",
+            "adult": false,
+            "overview": "Buck is a big-hearted dog whose blissful domestic life is turned upside down when he is suddenly uprooted from his California home and transplanted to the exotic wilds of the Yukon during the Gold Rush of the 1890s. As the newest rookie on a mail delivery dog sled team—and later its leader—Buck experiences the adventure of a lifetime, ultimately finding his true place in the world and becoming his own master.",
+            "poster_path": "/33VdppGbeNxICrFUtW2WpGHvfYc.jpg",
+            "popularity": 31.264
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pF94yBF4XWNLT5CDecLIensicpi.jpg",
+            "genre_ids": [
+                35,
+                10749
+            ],
+            "id": 200727,
+            "original_language": "en",
+            "original_title": "Love, Rosie",
+            "overview": "Since the moment they met at age 5, Rosie and Alex have been best friends, facing the highs and lows of growing up side by side. A fleeting shared moment, one missed opportunity, and the decisions that follow send their lives in completely different directions. As each navigates the complexities of life, love, and everything in between, they always find their way back to each other - but is it just friendship, or something more?  Based on Cecelia Ahern's bestselling novel, LOVE, ROSIE is a heart-warming, modern comedy-of-errors posing the ultimate question: do we really only get one shot at true love?",
+            "poster_path": "/2HOd431LX9ggqSpBIJ7qyYhATyo.jpg",
+            "release_date": "2014-10-16",
+            "title": "Love, Rosie",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 4486,
+            "popularity": 18.492
+        },
+        {
+            "id": 547016,
+            "video": false,
+            "vote_count": 1271,
+            "vote_average": 7.4,
+            "title": "The Old Guard",
+            "release_date": "2020-07-10",
+            "original_language": "en",
+            "original_title": "The Old Guard",
+            "genre_ids": [
+                28,
+                14
+            ],
+            "backdrop_path": "/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg",
+            "adult": false,
+            "overview": "Four undying warriors who've secretly protected humanity for centuries become targeted for their mysterious powers just as they discover a new immortal.",
+            "poster_path": "/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg",
+            "popularity": 184.349
+        },
+        {
+            "id": 438590,
+            "video": false,
+            "vote_count": 603,
+            "vote_average": 5.9,
+            "title": "A-X-L",
+            "release_date": "2018-08-23",
+            "original_language": "en",
+            "original_title": "A-X-L",
+            "genre_ids": [
+                28,
+                12,
+                878,
+                10751
+            ],
+            "backdrop_path": "/l1nYo0yzKjf84atnBDbx0do16vQ.jpg",
+            "adult": false,
+            "overview": "The life of a teenage boy is forever altered by a chance encounter with cutting edge military technology.",
+            "poster_path": "/9kB56ZdMB6RgY5QtX9Bar45jCeI.jpg",
+            "popularity": 20.075
+        }
+    ],
+    "total_pages": 1,
+    "total_results": 7
+}

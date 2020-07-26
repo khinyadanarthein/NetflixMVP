@@ -16,7 +16,7 @@ extension Data {
                               file: StaticString = #file,
                               line: UInt = #line) throws -> Data {
     
-    let bundle = Bundle(for: TestBundleClass.self)
+    let bundle = Bundle(for: NetflixMVPUnitTests.self)
     let url = try XCTUnwrap(bundle.url(forResource: fileName, withExtension: "json"),
                             "Unable to find \(fileName).json. Did you add it to the tests?",
       file: file, line: line)

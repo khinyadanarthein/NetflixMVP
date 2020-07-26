@@ -39,17 +39,17 @@ protocol DataModel {
     func searchMovie(movieName: String) -> Observable<[SearchMovieVO]>
     
     //Login
-    func requestToken(success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
+    func requestToken(apiKey: String ,success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
     func loginWithToken(username : String, password : String, token : String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
     func getSessionID(token: String, success: @escaping (String) -> Void, fail: @escaping (String) -> Void)
     
     //Profile
     //func getAccountDetail()
-    func getAccoundtDetail(success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void)
+    func getAccoundtDetail(sessionId: String, success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void)
     func getAccountDetailObservable() -> Observable<AccountDetailResponse>
-    func getRatedMovies()
+    func getRatedMovies(sessionId: String, accountId : String)
     func getRatedMoviesObservable() -> Observable<[RateMovieVO]>
-    func getWatchMovies()
+    func getWatchMovies(sessionId: String, accountId : String)
     func getWatchMoviesObservable() -> Observable<[WatchMovieVO]>
     
 }

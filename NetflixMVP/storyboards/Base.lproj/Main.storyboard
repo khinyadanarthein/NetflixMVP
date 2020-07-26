@@ -302,6 +302,9 @@ If you have any questions If you have any questions If you have any questions If
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="rateMovie"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                         </subviews>
                                     </stackView>

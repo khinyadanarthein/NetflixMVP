@@ -15,36 +15,24 @@ class NetflixMVPUITests: XCTestCase {
     
     func test_tab_bar_button_navigate_success() {
         app.launch()
-        let screenId = 1
-        switch screenId {
-        case 1:
-            test_navigate_to_home_screen()
-            break
-        case 2:
-            test_navigate_to_search_screen()
-            break
-        default:
-            test_navigate_to_profile_screen()
-            break
-        }
-        
     }
     
     /**
         test for navigation of Search screen
      */
     func test_navigate_to_home_screen() {
+        app.launch()
         app.buttons["Home"].tap()
         let trendCollectionView = app.collectionViews.element(boundBy: 0)
         if trendCollectionView.cells.count > 0 {
             trendCollectionView.cells.element(boundBy: 0).tap()
-            test_close_detail_page_success()
+            close_detail_page_success()
         }
 
         let nowPlayCollectionView = app.collectionViews.element(boundBy: 1)
         if nowPlayCollectionView.cells.count > 0 {
             nowPlayCollectionView.cells.element(boundBy: 0).tap()
-            test_close_detail_page_success()
+            close_detail_page_success()
         }
 
         let table = app.tables.element(boundBy: 0)
@@ -56,13 +44,13 @@ class NetflixMVPUITests: XCTestCase {
         let upcomingCollectionView = app.collectionViews.element(boundBy: 2)
         if upcomingCollectionView.cells.count > 0 {
             upcomingCollectionView.cells.element(boundBy: 0).tap()
-            test_close_detail_page_success()
+            close_detail_page_success()
         }
         sleep(2)
         let topRatedCollectionView = app.collectionViews.element(boundBy: 3)
         if topRatedCollectionView.cells.count > 0 {
             topRatedCollectionView.cells.element(boundBy: 3).tap()
-            test_close_detail_page_success()
+            close_detail_page_success()
         }
         
     }
@@ -71,18 +59,19 @@ class NetflixMVPUITests: XCTestCase {
         test for navigation of Search screen
      */
     func test_navigate_to_search_screen() {
+        app.launch()
         app.buttons["Search"].tap()
         let searchText = app.textFields["movieName"]
         searchText.tap()
-        searchText.typeText("the")
-        sleep(4)
+        searchText.typeText("L")
+        sleep(5)
         
         if app.collectionViews.cells.count > 0 {
             let collectionCell = app.collectionViews.cells.element(boundBy: 0)
             collectionCell.tap()
             sleep(2)
-            test_add_watch_list_success()
-            test_close_detail_page_success()
+            add_watch_list_success()
+            close_detail_page_success()
         }
         
     }
@@ -91,6 +80,7 @@ class NetflixMVPUITests: XCTestCase {
         test for navigation of Profile / Login
      */
     func test_navigate_to_profile_screen() {
+        app.launch()
         app.buttons["Profile"].tap()
         
         // if first time login, test for login screen navigate
@@ -163,7 +153,7 @@ class NetflixMVPUITests: XCTestCase {
         sleep(2)
         cell.element(boundBy: 0).tap()
         sleep(2)
-        test_close_detail_page_success()
+        close_detail_page_success()
     }
     /**
        rated list cell click success
@@ -174,26 +164,35 @@ class NetflixMVPUITests: XCTestCase {
         sleep(2)
         cell.element(boundBy: 0).tap()
         sleep(2)
-        test_close_detail_page_success()
+        close_detail_page_success()
     }
     
     /**
-         close detail screen success
+          detail screen add watch list success
     */
-    func test_add_watch_list_success() {
-        XCTAssertNotNil(app.otherElements["myList"])
-        app.otherElements["myList"].tap()
+    func add_watch_list_success() {
+        XCTAssertNotNil(app.scrollViews.otherElements.otherElements["myList"])
+        app.scrollViews.otherElements.otherElements["myList"].tap()
+        
         sleep(6)
-//        let alert = app.alerts["Add Watch"]
-//        XCTAssertNotNil(alert)
-//        alert.buttons["OK"].tap()
+        
+    }
+    
+    /**
+          detail screen add watch list success
+    */
+    func add_rated_list_success() {
+        XCTAssertNotNil(app.scrollViews.otherElements.otherElements["rateMovie"])
+        app.scrollViews.otherElements.otherElements["myList"].tap()
+        
+        sleep(6)
         
     }
     
     /**
          close detail screen success
     */
-    func test_close_detail_page_success() {
+    func close_detail_page_success() {
         sleep(2)
         XCTAssertNotNil(app.images["closeDetailBtn"])
         app.images["closeDetailBtn"].tap()

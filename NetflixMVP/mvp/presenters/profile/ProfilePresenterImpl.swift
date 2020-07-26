@@ -33,7 +33,7 @@ class ProfilePresenterImpl : ProfilePresenter {
 //                self.mView?.showErrorMessage(err: error.localizedDescription)
 //            }).disposed(by: bag)
         
-        model.getAccoundtDetail(success: { (data) in
+        model.getAccoundtDetail(sessionId:UserDefaultUtil.shared.retrieveSessionID() ,success: { (data) in
             self.mView?.hideLoading()
             self.accountInfo = data
             self.mView?.showAccountDetail(data: data)
@@ -43,7 +43,7 @@ class ProfilePresenterImpl : ProfilePresenter {
             self.mView?.showErrorMessage(err: error)
         }
         
-        model.getRatedMovies()
+        model.getRatedMovies(sessionId:UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
         model.getRatedMoviesObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext:{ data in
@@ -57,7 +57,7 @@ class ProfilePresenterImpl : ProfilePresenter {
                 self.mView?.showErrorMessage(err: error.localizedDescription)
             }).disposed(by: bag)
         
-        model.getWatchMovies()
+        model.getWatchMovies(sessionId:UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
         model.getWatchMoviesObservable()
         .observeOn(MainScheduler.instance)
         .subscribe(onNext:{ data in

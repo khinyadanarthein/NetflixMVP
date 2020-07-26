@@ -24,8 +24,6 @@ extension MovieDetailPresenterImpl : MovieDetailPresenter {
     func onUIReady(movieId : Int) {
         mView?.showLoading()
         model.getSimilarMovie(id: movieId)
-        //let movie = model.getMovieById(id: movieId)
-        //mView?.showMovieDetail(data: model.getMovieById(id: movieId)!)
         model.getSimilarMovieObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext:{ data in

@@ -31,7 +31,7 @@ protocol MovieApi {
     func searchMovies(movieName: String) -> Observable<SearchMovieResponse>
     
     // Login
-    func requestToken(success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
+    func requestToken(apiKey : String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
     
     func loginWithToken(id : String, password : String, token : String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void)
     

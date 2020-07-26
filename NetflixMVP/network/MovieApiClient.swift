@@ -186,9 +186,9 @@ extension MovieApiClient : MovieApi {
     }
     //========================= LOGIN =========================//
     
-    func requestToken(success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
+    func requestToken(apiKey : String ,success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
         let url = API_REQUEST_TOKEN
-        let params = [PARAM_API_KEY: API_KEY]
+        let params = [PARAM_API_KEY: apiKey]
         
         self.requestApiWithoutObservable(url: url, method: .get, params: params, encoding: URLEncoding(destination: .queryString), success: { (response) in
             
@@ -201,6 +201,7 @@ extension MovieApiClient : MovieApi {
             fail(error)
         }
     }
+    
     func loginWithToken(id: String, password: String, token: String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
         
         let url = API_LOGIN_WITH_TOKEN

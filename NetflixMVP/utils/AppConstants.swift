@@ -35,6 +35,7 @@ let PARAM_PASSWORD = "password"
 let IMAGE_URL_PATH = "https://image.tmdb.org/t/p/w500"
 
 // api movie url
+let BASE_URL =  "https://api.themoviedb.org/3/"
 let API_GET_MOVIE = "movie/"
 let API_GET_UPCOMING_MOVIES = "upcoming"
 let API_GET_TRENDING_MOVIES = "popular"
