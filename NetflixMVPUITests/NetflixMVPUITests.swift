@@ -175,7 +175,7 @@ class NetflixMVPUITests: XCTestCase {
         app.scrollViews.otherElements.otherElements["myList"].tap()
         
         sleep(6)
-        
+        close_detail_page_success()
     }
     
     /**
@@ -186,6 +186,7 @@ class NetflixMVPUITests: XCTestCase {
         app.scrollViews.otherElements.otherElements["myList"].tap()
         
         sleep(6)
+        close_detail_page_success()
         
     }
     
