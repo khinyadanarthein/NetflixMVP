@@ -21,38 +21,38 @@ extension UIViewController {
     
     func navigateToDetail(movie : MovieDetailVO){
         
-        let vc = mainStoryBoard.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
-        if let vc = vc {
+        let vc = CustomMovieDetailViewController(nibName: String(describing: CustomMovieDetailViewController.identifier), bundle: nil)
+        //if let vc = vc {
             vc.movie = movie
             print("movie id \(movie.id)")
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
-        }
+        //}
     }
     
     
     func navigateToProfile(){
         
-        let vc = mainStoryBoard.instantiateViewController(identifier: ProfileViewController.identifier) as? ProfileViewController
-        if let vc = vc {
+        let vc = CustomProfileViewController(nibName: String(describing: CustomProfileViewController.identifier), bundle: nil)
+        //if let vc = vc {
             vc.modalPresentationStyle = .fullScreen
             vc.navigationItem.hidesBackButton = true
             vc.navigationItem.title = "Profile"
             //self.present(vc, animated: true, completion: nil)
             self.navigationController?.pushViewController(vc, animated: true)
-        }
+        //}
     }
     
     func navigateToLogin(){
         
-        let vc = mainStoryBoard.instantiateViewController(identifier: LoginViewController.identifier) as? LoginViewController
-        if let vc = vc {
+        let vc = CustomLoginViewController(nibName: String(describing: CustomLoginViewController.identifier), bundle: nil)
+        //if let vc = vc {
             vc.modalPresentationStyle = .fullScreen
             vc.navigationItem.hidesBackButton = true
             vc.navigationItem.title = "Login"
             //self.present(vc, animated: true, completion: nil)
             self.navigationController?.pushViewController(vc, animated: true)
-        }
+        //}
     }
     
     func showToast(message : String, font: UIFont) {

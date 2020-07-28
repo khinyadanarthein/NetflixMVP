@@ -27,9 +27,10 @@ class TopRatedTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        collectionViewTopRated.register(UINib(nibName: TopRatedCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TopRatedCollectionViewCell.identifier)
+        //collectionViewTopRated.register(UINib(nibName: TopRatedCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TopRatedCollectionViewCell.identifier)
         
-        
+        collectionViewTopRated.register(CustomTopRatedCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CustomTopRatedCollectionViewCell.self))
+
         collectionViewTopRated.dataSource = self
         collectionViewTopRated.delegate = self
     }
@@ -49,7 +50,7 @@ extension TopRatedTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopRatedCollectionViewCell.identifier, for: indexPath) as? TopRatedCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomTopRatedCollectionViewCell.identifier, for: indexPath) as? CustomTopRatedCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.mData = self.topRatedMovieList[indexPath.row]

@@ -28,13 +28,20 @@ class MainTabBarViewController: UITabBarController {
         homeTabBar.title = "Home"
         homeTabBar.image = UIImage(systemName: "house")
         homeTabBar.selectedImage = UIImage(systemName: "house.fill")
-        let movieListVC = MovieListViewController()
+        
+        let movieListVC = CustomMovieListViewController(nibName: "CustomMovieListViewController", bundle: nil)
         movieListVC.tabBarItem = homeTabBar
+        movieListVC.tabBarItem.badgeColor = .white
         
         let movieListNavVC = UINavigationController()
         movieListNavVC.navigationBar.prefersLargeTitles = false
+        movieListNavVC.navigationBar.isTranslucent = false
+        movieListNavVC.navigationBar.barTintColor = .black
+        movieListNavVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         movieListNavVC.viewControllers = [movieListVC]
         movieListVC.navigationItem.title = "Movies"
+        let logo = UIBarButtonItem(image: UIImage(named: "netfilx-64"), style: .plain, target: self, action: nil)
+        movieListVC.navigationItem.leftBarButtonItem  = logo
         
         // Search Movies
         let searchTabBar = UITabBarItem()
@@ -42,7 +49,7 @@ class MainTabBarViewController: UITabBarController {
         searchTabBar.image = UIImage(systemName: "magnifyingglass")
         searchTabBar.selectedImage = UIImage(systemName: "magnifyingglass.circle.fill")
         
-        let searchVC = CustomSearchViewController()
+        let searchVC = CustomMovieSearchViewController(nibName: "CustomMovieSearchViewController", bundle: nil)
         searchVC.tabBarItem = searchTabBar
         searchVC.tabBarItem.badgeColor = .white
         
@@ -53,27 +60,33 @@ class MainTabBarViewController: UITabBarController {
         searchNavVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         searchNavVC.viewControllers = [searchVC]
         searchVC.navigationItem.title = "Search Movies"
-        let logo = UIBarButtonItem(image: UIImage(named: "netfilx-64"), style: .plain, target: self, action: nil) 
         searchVC.navigationItem.leftBarButtonItem  = logo
         
         // Profile / Login
         let profileTabBar = UITabBarItem()
         profileTabBar.title = "Profile"
-        profileTabBar.image = UIImage(systemName: "magnifyingglass")
-        profileTabBar.selectedImage = UIImage(systemName: "magnifyingglass.circle.fill")
+        profileTabBar.image = UIImage(systemName: "person")
+        profileTabBar.selectedImage = UIImage(systemName: "person.circle.fill")
         
-        let profileVC = ProfileViewController()
+        let profileVC = CustomProfileViewController(nibName: "CustomProfileViewController", bundle: nil)
+        //let profileVC = CustomProfileViewController()
         profileVC.tabBarItem = profileTabBar
+        profileVC.tabBarItem.badgeColor = .white
         
         let profileNavVC = UINavigationController()
         profileNavVC.navigationBar.prefersLargeTitles = false
+        profileNavVC.navigationBar.isTranslucent = false
+        profileNavVC.navigationBar.barTintColor = .black
+        profileNavVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         profileNavVC.viewControllers = [profileVC]
+        
         profileVC.navigationItem.title = "Profile"
+        profileVC.navigationItem.leftBarButtonItem = logo
         
         self.setViewControllers([
-            //movieListVC
-            searchNavVC
-            //,profileNavVC
+            movieListNavVC
+            ,searchNavVC
+            ,profileNavVC
         ], animated: true)
     }
 }

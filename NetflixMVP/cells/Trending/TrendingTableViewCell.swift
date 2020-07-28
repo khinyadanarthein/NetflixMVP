@@ -25,8 +25,9 @@ class TrendingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionViewTrending.register(UINib(nibName: TrendingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TrendingCollectionViewCell.identifier)
-        
+        //collectionViewTrending.register(UINib(nibName: TrendingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TrendingCollectionViewCell.identifier)
+        collectionViewTrending.register(CustomTrendingCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CustomTrendingCollectionViewCell.self))
+
         collectionViewTrending.dataSource = self
         collectionViewTrending.delegate = self
     }
@@ -47,7 +48,7 @@ extension TrendingTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrendingCollectionViewCell.identifier, for: indexPath) as? TrendingCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomTrendingCollectionViewCell.identifier, for: indexPath) as? CustomTrendingCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.mData = self.trendingMovieList[indexPath.row]

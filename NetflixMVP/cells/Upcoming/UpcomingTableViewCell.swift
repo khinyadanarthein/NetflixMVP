@@ -26,8 +26,9 @@ class UpcomingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        collectionViewUpcoming.register(UINib(nibName: UpcomingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: UpcomingCollectionViewCell.identifier)
-        
+        //collectionViewUpcoming.register(UINib(nibName: CustomUpcomingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CustomUpcomingCollectionViewCell.identifier)
+        collectionViewUpcoming.register(CustomUpcomingCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CustomUpcomingCollectionViewCell.self))
+
         collectionViewUpcoming.dataSource = self
         collectionViewUpcoming.delegate = self
     }
@@ -47,7 +48,7 @@ extension UpcomingTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.identifier, for: indexPath) as? UpcomingCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomUpcomingCollectionViewCell.identifier, for: indexPath) as? CustomUpcomingCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.mData = upcomingMovieList[indexPath.row]

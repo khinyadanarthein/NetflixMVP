@@ -15,6 +15,8 @@ class CustomSearchViewController: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .darkGray
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 5
         return view
     }()
     
@@ -30,7 +32,7 @@ class CustomSearchViewController: UIViewController {
     
     let label : UILabel = {
         let label = UILabel()
-        label.text = " Movies & TV"
+        label.text = "Movies & TV"
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
@@ -43,16 +45,18 @@ class CustomSearchViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(systemName: "magnifyingglass")
         view.tintColor = .gray
+        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFit
         return view
     }()
     
     let tfMovieName: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .roundedRect
-        textField.textColor = .white
+        textField.borderStyle = .none
+        textField.textColor = .lightText
         textField.textAlignment = .left
-        textField.text = ""
+        textField.font = UIFont.systemFont(ofSize: 15)
         return textField
     }()
     
@@ -62,6 +66,8 @@ class CustomSearchViewController: UIViewController {
         view.image = UIImage(systemName: "xmark.circle.fill")
         view.tintColor = .lightGray
         view.isUserInteractionEnabled = true
+        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFit
         return view
     }()
     
@@ -79,10 +85,10 @@ class CustomSearchViewController: UIViewController {
         collectionView.backgroundColor = .black
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
-            layout.minimumLineSpacing = CGFloat(10)
+            //layout.minimumLineSpacing = CGFloat(10)
             layout.sectionInset.left = CGFloat(10)
             layout.sectionInset.right = CGFloat(10)
-            layout.estimatedItemSize = .zero
+            
         }
         
         return collectionView
@@ -125,13 +131,13 @@ class CustomSearchViewController: UIViewController {
         self.titleView.addSubview(label)
         
         NSLayoutConstraint.activate([
-            searchFieldView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 10),
+            searchFieldView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
             searchFieldView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
             searchFieldView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 10),
             searchFieldView.heightAnchor.constraint(equalToConstant: 35),
             
             searchStackView.leadingAnchor.constraint(equalTo: self.searchFieldView.leadingAnchor, constant: 0),
-            searchStackView.trailingAnchor.constraint(equalTo: self.searchFieldView.trailingAnchor, constant: 5),
+            searchStackView.trailingAnchor.constraint(equalTo: self.searchFieldView.trailingAnchor, constant: -5),
             searchStackView.topAnchor.constraint(equalTo: self.searchFieldView.topAnchor, constant: 0),
             searchStackView.bottomAnchor.constraint(equalTo: self.searchFieldView.bottomAnchor, constant: 0),
             
@@ -183,7 +189,7 @@ class CustomSearchViewController: UIViewController {
     
     private func initView() {
         
-        tfMovieName.attributedPlaceholder = NSAttributedString(string: "Movie Name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        tfMovieName.attributedPlaceholder = NSAttributedString(string: "Movie Name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         collectionViewMovieResult.delegate = self
         collectionViewMovieResult.dataSource = self
         
@@ -216,13 +222,14 @@ extension CustomSearchViewController : MovieSearchView {
     }
     
     func navigateToMovieDetail(movie: MovieDetailVO) {
-        let vc = mainStoryBoard.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
-        if let vc = vc {
+        let vc = CustomMovieDetailViewController(nibName: "CustomMovieDetailViewController", bundle: nil)
+        //let vc = mainStoryBoard.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
+        //if let vc = vc {
             vc.movie = movie
             print("movie id \(movie.id)")
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
-        }
+        //}
     }
 }
 

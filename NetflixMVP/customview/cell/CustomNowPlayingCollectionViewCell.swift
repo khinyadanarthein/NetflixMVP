@@ -1,14 +1,14 @@
 //
-//  CustomSearchCollectionViewCell.swift
+//  CustomNowPlayingCollectionViewCell.swift
 //  NetflixMVP
 //
-//  Created by Khin Yadanar Thein on 27/07/2020.
+//  Created by Khin Yadanar Thein on 28/07/2020.
 //  Copyright © 2020 Khin Yadanar Thein. All rights reserved.
 //
 
 import UIKit
 
-class CustomSearchCollectionViewCell: UICollectionViewCell {
+class CustomNowPlayingCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,11 +26,16 @@ class CustomSearchCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
     private func buildView() {
         
-//        let imageView = CommonCellView()
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//
+        //        let imageView = CommonCellView()
+        //        imageView.translatesAutoresizingMaskIntoConstraints = false
+        //
         self.contentView.addSubview(commonView)
         
         NSLayoutConstraint.activate([
@@ -39,19 +44,14 @@ class CustomSearchCollectionViewCell: UICollectionViewCell {
             commonView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0),
             commonView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
             commonView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0),
-            ])
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        ])
     }
     
     static var identifier : String {
-        return "CustomSearchCollectionViewCell"
+        return "CustomNowPlayingCollectionViewCell"
     }
     
-    var mData:SearchMovieVO? = nil {
+    var mData:NowPlayingMovieVO? = nil {
         didSet{
             if let data = mData{
                 self.bindData(data: data)
@@ -59,9 +59,9 @@ class CustomSearchCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    fileprivate func bindData(data:SearchMovieVO){
+    fileprivate func bindData(data:NowPlayingMovieVO){
         
-        let imageURL = IMAGE_URL_PATH + (data.posterPath ?? "")
+        let imageURL = IMAGE_URL_PATH + data.posterPath
         let url = URL(string: imageURL)
         commonView.backImageView.kf.indicatorType = .activity
         commonView.backImageView.kf.setImage(

@@ -17,7 +17,7 @@ class MovieDetailVO: Object, Codable {
     var genres = List<GenreVO>()
     @objc dynamic var homepage: String = ""
     @objc dynamic var id: Int = 0
-    @objc dynamic var imdbID : String = ""
+    @objc dynamic var imdbID : String? = ""
     @objc dynamic var originalLanguage : String = ""
     @objc dynamic var originalTitle : String = ""
     @objc dynamic var overview: String = ""

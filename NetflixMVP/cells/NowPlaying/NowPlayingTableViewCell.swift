@@ -27,8 +27,9 @@ class NowPlayingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        collectionViewNowPlaying.register(UINib(nibName: NowPlayingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: NowPlayingCollectionViewCell.identifier)
-        
+        //collectionViewNowPlaying.register(UINib(nibName: NowPlayingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: NowPlayingCollectionViewCell.identifier)
+        collectionViewNowPlaying.register(CustomNowPlayingCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CustomNowPlayingCollectionViewCell.self))
+
         
         collectionViewNowPlaying.dataSource = self
         collectionViewNowPlaying.delegate = self
@@ -49,7 +50,7 @@ extension NowPlayingTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.identifier, for: indexPath) as? NowPlayingCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomNowPlayingCollectionViewCell.identifier, for: indexPath) as? CustomNowPlayingCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.mData = self.nowPlayMovieList[indexPath.row]
