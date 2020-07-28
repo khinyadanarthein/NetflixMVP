@@ -31,6 +31,7 @@ class MovieSearchPresenterImpl : MovieSearchPresenter {
                 self.mView?.hideLoading()
                 self.mView?.showErrorMessage(err: error.localizedDescription)
             }).disposed(by: bag)
+       // mView?.hideLoading()
     }
     
     func attachView(view: MovieSearchView) {

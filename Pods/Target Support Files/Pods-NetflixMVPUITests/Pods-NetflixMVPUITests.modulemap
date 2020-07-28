@@ -1,0 +1,6 @@
+framework module Pods_NetflixMVPUITests {
+  umbrella header "Pods-NetflixMVPUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

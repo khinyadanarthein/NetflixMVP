@@ -62,7 +62,7 @@
         <image name="logo" width="318" height="318"/>
         <image name="netfilx-64" width="64" height="64"/>
         <namedColor name="primary-color">
-            <color red="0.11400000005960464" green="0.125" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
     </resources>
 </document>
