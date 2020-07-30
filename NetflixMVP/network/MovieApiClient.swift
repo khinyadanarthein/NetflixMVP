@@ -82,15 +82,15 @@ extension MovieApiClient : MovieApi {
     }
     
     //========================= DETAIL =========================//
-    
-    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
-        let url = API_GET_MOVIE + "\(id)"
-        return  self.reuqestApiWithHeaders(url: url
-        , method: .get
-        , params: [PARAM_API_KEY: API_KEY, PARAM_LANG: PARAM_LANGUAGE]
-        , value:MovieDetailVO.self )
-    }
-    
+//    
+//    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
+//        let url = API_GET_MOVIE + "\(id)"
+//        return  self.reuqestApiWithHeaders(url: url
+//        , method: .get
+//        , params: [PARAM_API_KEY: API_KEY, PARAM_LANG: PARAM_LANGUAGE]
+//        , value:MovieDetailVO.self )
+//    }
+//    
     func getMovieDetail(id : Int, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void) {
         let url = API_GET_MOVIE + "\(id)"
         let params = [PARAM_API_KEY: API_KEY, PARAM_LANG: PARAM_LANGUAGE]

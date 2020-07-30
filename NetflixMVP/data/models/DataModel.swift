@@ -11,8 +11,8 @@ import RxSwift
 
 protocol DataModel {
     
-    func getMoviesFromAPI(status : String)
-    func getAllMovies(status : MovieStatus) -> Observable<[MovieVO]>
+    //func getMoviesFromAPI(status : String)
+    //func getAllMovies(status : MovieStatus) -> Observable<[MovieVO]>
     
     //Home
     func getTrendingMoviesFromAPI(page : Int)
@@ -25,8 +25,8 @@ protocol DataModel {
     func getTopRatedMovies() -> Observable<[TopRatedMovieVO]>
     
     // Detail
-    func getMovieByIdFromAPI(id : Int)
-    func getMovieById(id : Int) -> Observable<MovieDetailVO>
+    //func getMovieByIdFromAPI(id : Int)
+    //func getMovieById(id : Int) -> Observable<MovieDetailVO>
     func getMovieDetail(id : Int, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void)
     func getMovieVideo(id : Int, success: @escaping (MovieVideoVO) -> Void, fail: @escaping (String) -> Void)
     func getSimilarMovie(id : Int)

@@ -22,8 +22,15 @@ target 'NetflixMVPUnitTests' do
   
   use_frameworks!
   
-  pod 'RxSwift'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'netfox'
+  pod 'RxRealm'
+  pod 'RealmSwift'
+  pod 'Kingfisher'
+  pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
   pod 'Mocker'
   
 end

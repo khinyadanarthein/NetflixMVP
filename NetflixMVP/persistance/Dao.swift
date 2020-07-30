@@ -10,8 +10,8 @@ import Foundation
 import RxSwift
 
 protocol Dao {
-    func saveAllMovies(data:[MovieVO], status:String) -> Observable<Bool>
-    func getMoviesByStatus(status : MovieStatus) -> Observable<[MovieVO]>
+    //func saveAllMovies(data:[MovieVO], status:String) -> Observable<Bool>
+    //func getMoviesByStatus(status : MovieStatus) -> Observable<[MovieVO]>
     
     func saveTrendingMovies(data:[TrendingMovieVO]) -> Observable<Bool>
     func saveNowPlayingMovies(data:[NowPlayingMovieVO]) -> Observable<Bool>
@@ -23,9 +23,9 @@ protocol Dao {
     func getTrendingMovies() -> Observable<[TrendingMovieVO]>
     func getTopRatedMovies() -> Observable<[TopRatedMovieVO]>
     
-    func saveMovieDetail(data : MovieDetailVO) -> Observable<Bool>
-    func getMovieById(id:Int) -> Observable<MovieDetailVO>
-    func getMovieDetailById(id: Int) -> MovieDetailVO?
+    //func saveMovieDetail(data : MovieDetailVO) -> Observable<Bool>
+    //func getMovieById(id:Int) -> Observable<MovieDetailVO>
+    //func getMovieDetailById(id: Int) -> MovieDetailVO?
     
     func saveSimilarMovies(data:[SimilarMovieVO]) -> Observable<Bool>
     func getSimilarMovies() -> Observable<[SimilarMovieVO]>

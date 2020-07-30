@@ -24,17 +24,17 @@ class DataModelImpl: DataModel {
 //
 //    }
     
-    func getMoviesFromAPI(status: String) {
-        _ = api.getMovies(status: status)
-            .flatMap{self.db.saveAllMovies(data: $0.results, status: status)}
-        .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
-    }
-    
-    func getAllMovies(status: MovieStatus) -> Observable<[MovieVO]> {
-        //db.getUpcomingMovies()
-        db.getMoviesByStatus(status: status)
-    }
-    
+//    func getMoviesFromAPI(status: String) {
+//        _ = api.getMovies(status: status)
+//            .flatMap{self.db.saveAllMovies(data: $0.results, status: status)}
+//        .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
+//    }
+//    
+//    func getAllMovies(status: MovieStatus) -> Observable<[MovieVO]> {
+//        //db.getUpcomingMovies()
+//        db.getMoviesByStatus(status: status)
+//    }
+//    
     //========================= HOME =========================//
     
     func getTrendingMoviesFromAPI(page: Int) {
@@ -79,15 +79,15 @@ class DataModelImpl: DataModel {
     
     //========================= DETAIL =========================//
     
-    func getMovieByIdFromAPI(id: Int) {
-        _ = api.getMovieById(id: id)
-            .map{self.db.saveMovieDetail(data: $0)}
-            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
-    }
+//    func getMovieByIdFromAPI(id: Int) {
+//        _ = api.getMovieById(id: id)
+//            .map{self.db.saveMovieDetail(data: $0)}
+//            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
+//    }
     
-    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
-        db.getMovieById(id: id)
-    }
+//    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
+//        db.getMovieById(id: id)
+//    }
     
     func getMovieDetail(id: Int, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void) {
         return api.getMovieDetail(id: id, success: { (data) in

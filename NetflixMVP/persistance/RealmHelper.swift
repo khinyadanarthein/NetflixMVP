@@ -159,19 +159,19 @@ class RealmHelper: Dao {
             }
         })
     }
-    
-    func getNowShowingMovies() -> Observable<[MovieVO]> {
-        
-        let movies = realm.objects(MovieVO.self).filter("status = 'now'")
-        return Observable.array(from: movies)
-    }
-    
-    func getUpcomingMovies() -> Observable<[MovieVO]> {
-        
-        //let movies = realm.objects(MovieVO.self).filter("status = 'coming'")
-        let movies = realm.objects(MovieVO.self)
-        return Observable.array(from: movies)
-    }
+//
+//    func getNowShowingMovies() -> Observable<[MovieVO]> {
+//
+//        let movies = realm.objects(MovieVO.self).filter("status = 'now'")
+//        return Observable.array(from: movies)
+//    }
+//
+//    func getUpcomingMovies() -> Observable<[MovieVO]> {
+//
+//        //let movies = realm.objects(MovieVO.self).filter("status = 'coming'")
+//        let movies = realm.objects(MovieVO.self)
+//        return Observable.array(from: movies)
+//    }
     
     func getMoviesByStatus(status: MovieStatus) -> Observable<[MovieVO]> {
         let movies = realm.objects(MovieVO.self)

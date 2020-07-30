@@ -8,81 +8,92 @@
 
 import Foundation
 import RxSwift
+import XCTest
 @testable import NetflixMVP
 
-class MockDataModelImpl {
-    
+class MockDataModelImpl : XCTestCase {
+
     static let shared:MockDataModelImpl = MockDataModelImpl()
-    let api:MovieApi = MovieApiClient.shared
-    let db :Dao = RealmHelper.shared
-    
-    func getMoviesFromAPI(status: String) {
-        _ = api.getMovies(status: status)
-            .flatMap{self.db.saveAllMovies(data: $0.results, status: status)}
-            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
-    }
-    
-    func getAllMovies(status: MovieStatus) -> Observable<[MovieVO]> {
-        //db.getUpcomingMovies()
-        db.getMoviesByStatus(status: status)
-    }
+    let mockApi:MovieApi = MockMovieApiClient.shared
+    let mockdb :Dao = MockRealmHelper.shared
+    let bag:DisposeBag = DisposeBag()
+}
+extension MockDataModelImpl : DataModel {
     
     //========================= HOME =========================//
-    
+    //MARK : --- Home
     func getTrendingMoviesFromAPI(page: Int) {
-        _ = api.getTrendingMovies(page: page)
-            .flatMap{self.db.saveTrendingMovies(data: $0.results)}
-            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
+        _ = mockApi.getTrendingMovies(page: page)
+            .flatMap{ response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 20)
+                XCTAssertEqual(response.totalResults, 1000)
+                return self.mockdb.saveTrendingMovies(data: response.results)
+                
+            }
+        .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getNowPlayingMoviesFromAPI(page: Int) {
-        _ = api.getNowPlayingMovies(page: page)
-            .flatMap{self.db.saveNowPlayingMovies(data: $0.results)}
+        _ = mockApi.getNowPlayingMovies(page: page)
+            .flatMap{response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 20)
+                XCTAssertEqual(response.totalResults, 624)
+                return self.mockdb.saveNowPlayingMovies(data: response.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getUpcomingMoviesFromAPI(page: Int) {
-        _ = api.getUpcomingMovies(page: page)
-            .flatMap{self.db.saveUpcomingMovies(data: $0.results)}
+        _ = mockApi.getUpcomingMovies(page: page)
+            .flatMap{response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 20)
+                XCTAssertEqual(response.totalResults, 1000)
+                return self.mockdb.saveUpcomingMovies(data: response.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getTopRatedMoviesFromAPI(page: Int) {
-        _ = api.getTopRatedMovies(page: page)
-            .flatMap{self.db.saveTopRatedMovies(data: $0.results)}
+        _ = mockApi.getTopRatedMovies(page: page)
+            .flatMap{response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 20)
+                XCTAssertEqual(response.totalResults, 7570)
+                return self.mockdb.saveTopRatedMovies(data: response.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getTrendingMovies() -> Observable<[TrendingMovieVO]> {
-        db.getTrendingMovies()
+        let data = mockdb.getTrendingMovies()
+        XCTAssertNotNil(data)
+        return data
     }
     
     func getNowPlayingMovies() -> Observable<[NowPlayingMovieVO]> {
-        db.getNowShowingMovies()
+        let data = mockdb.getNowShowingMovies()
+        XCTAssertNotNil(data)
+        return data
     }
     
     func getUpcomingMovies() -> Observable<[UpcomingMovieVO]> {
-        db.getUpcomingMovies()
+        let data = mockdb.getUpcomingMovies()
+        XCTAssertNotNil(data)
+        return data
     }
     
     func getTopRatedMovies() -> Observable<[TopRatedMovieVO]> {
-        db.getTopRatedMovies()
+        let data = mockdb.getTopRatedMovies()
+        XCTAssertNotNil(data)
+        return data
     }
     
     //========================= DETAIL =========================//
     
-    func getMovieByIdFromAPI(id: Int) {
-        _ = api.getMovieById(id: id)
-            .map{self.db.saveMovieDetail(data: $0)}
-            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
-    }
-    
-    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
-        db.getMovieById(id: id)
-    }
+//    func getMovieById(id: Int) -> Observable<MovieDetailVO> {
+//        mockdb.getMovieById(id: id)
+//    }
     
     func getMovieDetail(id: Int, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void) {
-        return api.getMovieDetail(id: id, success: { (data) in
+        return mockApi.getMovieDetail(id: id, success: { (data) in
+            XCTAssertEqual(data.id, 547016)
+            XCTAssertEqual(data.backdropPath, "/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg")
             success(data)
             
         }) { (error) in
@@ -92,7 +103,12 @@ class MockDataModelImpl {
     }
     
     func getMovieVideo(id: Int, success: @escaping (MovieVideoVO) -> Void, fail: @escaping (String) -> Void) {
-        return api.getMovieVideo(id: id, success: { (data) in
+        
+        XCTAssertEqual(id, 547016)
+        return mockApi.getMovieVideo(id: id, success: { (data) in
+            XCTAssertEqual(data.id, "547016")
+            XCTAssertEqual(data.key, "aK-X2d0lJ_s")
+            
             success(data)
             
         }) { (error) in
@@ -102,21 +118,27 @@ class MockDataModelImpl {
     }
     
     func getSimilarMovie(id: Int) {
-        _ = api.getSimilarMoviesById(id: id, page: 1)
-            .flatMap{self.db.saveSimilarMovies(data: $0.results)}
+        _ = mockApi.getSimilarMoviesById(id: id, page: 1)
+            .flatMap{response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 20)
+                XCTAssertEqual(response.totalResults, 1087)
+                return self.mockdb.saveSimilarMovies(data: response.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getSimilarMovieObservable() -> Observable<[SimilarMovieVO]> {
-        db.getSimilarMovies()
+        let data = mockdb.getSimilarMovies()
+        XCTAssertNotNil(data)
+        return data
     }
     
     func deleteSimilarMovie() {
-        db.deleteOldSimilarMovies()
+        mockdb.deleteOldSimilarMovies()
     }
     
     func addMovieToRatedList(id: Int, sessionId: String, success: @escaping (String) -> Void, fail: @escaping (String) -> Void) {
-        api.addMovieToRated(id: id, sessionId: sessionId, success: { (data) in
+        mockApi.addMovieToRated(id: id, sessionId: sessionId, success: { (data) in
+            XCTAssertEqual(data.statusCode, 12)
             if data.statusCode == 12 {
                 success(data.statusMessage)
             }
@@ -128,7 +150,8 @@ class MockDataModelImpl {
     }
     
     func addMovieToWatchedList(userId: Int, movieId: Int, sessionId: String, success: @escaping (String) -> Void, fail: @escaping (String) -> Void) {
-        api.addMovieToWatched(userId: userId, movieId: movieId, sessionId: sessionId, success: { (data) in
+        mockApi.addMovieToWatched(userId: userId, movieId: movieId, sessionId: sessionId, success: { (data) in
+            XCTAssertEqual(data.statusCode, 12)
             if data.statusCode == 12 {
                 success(data.statusMessage)
             } else {
@@ -142,8 +165,11 @@ class MockDataModelImpl {
     //========================= SEARCH =========================//
     
     func searchMovie(movieName: String) -> Observable<[SearchMovieVO]> {
-        api.searchMovies(movieName: movieName)
-            .map{ movieResponse in movieResponse.results}
+        mockApi.searchMovies(movieName: movieName)
+            .map{ movieResponse in
+                XCTAssertEqual(movieResponse.results.count, 5)
+                return movieResponse.results
+        }
             .catchError { (error) -> Observable<[SearchMovieVO]> in
                 debugPrint(error.localizedDescription)
                 return Observable.just([SearchMovieVO]())
@@ -152,9 +178,10 @@ class MockDataModelImpl {
     
     //========================= LOGIN =========================//
     func requestToken(apiKey: String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
-        api.requestToken(apiKey: apiKey,success: { (data) in
+        mockApi.requestToken(apiKey: apiKey,success: { (data) in
             
             UserDefaultUtil.shared.saveToken(token: data.requestToken)
+            XCTAssertEqual(data.requestToken, "cb0d71050ac809b69ff9b0e42093ff0718af2b15")
             success(data)
             
         }) { (error) in
@@ -165,10 +192,11 @@ class MockDataModelImpl {
     
     func loginWithToken(username: String, password: String, token : String, success: @escaping (RequestTokenResponse) -> Void, fail: @escaping (String) -> Void) {
         
-        api.loginWithToken(id: username, password: password ,token: token, success: { (data) in
+        mockApi.loginWithToken(id: username, password: password ,token: token, success: { (data) in
             
             UserDefaultUtil.shared.saveUserName(userName: username)
             UserDefaultUtil.shared.savePassword(userName: password)
+            XCTAssertEqual(data.requestToken, "cb0d71050ac809b69ff9b0e42093ff0718af2b15")
             success(data)
             
         }) { (error) in
@@ -179,8 +207,9 @@ class MockDataModelImpl {
     
     func getSessionID(token: String, success: @escaping (String) -> Void, fail: @escaping (String) -> Void) {
         
-        api.getSessionID(token: token, success: { (sessionID) in
+        mockApi.getSessionID(token: token, success: { (sessionID) in
             UserDefaultUtil.shared.saveSessionID(token: sessionID)
+            XCTAssertEqual(sessionID, "67c0ce1a06d19346032c4326d2c098cb45b3a333")
             success(sessionID)
             
         }) { (error) in
@@ -190,8 +219,9 @@ class MockDataModelImpl {
     }
     
     //========================= Profile =========================//
-    func getAccoundtDetail(success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void) {
-        api.getAccount(sessionId: UserDefaultUtil.shared.retrieveSessionID(), success: { (data) in
+    
+    func getAccoundtDetail(sessionId: String, success: @escaping (AccountDetailResponse) -> Void, fail: @escaping (String) -> Void) {
+        mockApi.getAccount(sessionId: UserDefaultUtil.shared.retrieveSessionID(), success: { (data) in
             UserDefaultUtil.shared.saveUserId(userId: data.id)
             UserDefaultUtil.shared.saveUserName(userName: data.username)
             success(data)
@@ -202,31 +232,39 @@ class MockDataModelImpl {
         }
     }
     
-    //func getAccountDetail() {
-    
-    //        _ = api.getProfileDetail(sessionId: UserDefaultUtil.shared.retrieveSessionID())
-    //            .map{self.db.saveAccountDetail(data: $0)}
-    //            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
-    
-    // }
-    func getRatedMovies() {
-        _ = api.getRateMovies(sessionId: UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
-            .flatMap{self.db.saveRatedMovies(data: $0.results)}
+    func getRatedMovies(sessionId: String, accountId: String) {
+        _ = mockApi.getRateMovies(sessionId: sessionId, accountId: accountId)
+            .flatMap{response -> Observable<Bool> in
+                XCTAssertEqual(response.results.count, 5)
+                XCTAssertEqual(response.totalResults, 5)
+                return self.mockdb.saveRatedMovies(data: response.results)}
             .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
-    func getWatchMovies() {
-        _ = api.getWatchMovies(sessionId: UserDefaultUtil.shared.retrieveSessionID(), accountId: UserDefaultUtil.shared.retrieveUserName())
-            .flatMap{self.db.saveWatchedMovies(data: $0.results)}
-            .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
+    
+    func getWatchMovies(sessionId: String, accountId: String) {
+        _ = mockApi.getWatchMovies(sessionId: sessionId, accountId: accountId)
+        .flatMap{response -> Observable<Bool> in
+            XCTAssertEqual(response.results.count, 7)
+            XCTAssertEqual(response.totalResults, 7)
+            return self.mockdb.saveWatchedMovies(data: response.results)}
+        .subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe()
     }
     
     func getAccountDetailObservable() -> Observable<AccountDetailResponse> {
-        db.getAccountDetail()
+        let data = mockdb.getAccountDetail()
+        XCTAssertNotNil(data)
+        return data
     }
     func getRatedMoviesObservable() -> Observable<[RateMovieVO]> {
-        db.getRatedMovie()
+        let data = mockdb.getRatedMovie()
+        XCTAssertNotNil(data)
+        return data
     }
     func getWatchMoviesObservable() -> Observable<[WatchMovieVO]> {
-        db.getWatchedMovie()
+       let data = mockdb.getWatchedMovie()
+        XCTAssertNotNil(data)
+        return data
     }
+    
+    
 }

@@ -18,7 +18,7 @@ protocol MovieApi {
     func getTopRatedMovies(page : Int) -> Observable<GetTopRatedMoviesResponse>
     
     // Detail
-    func getMovieById(id : Int) -> Observable<MovieDetailVO>
+    //func getMovieById(id : Int) -> Observable<MovieDetailVO>
     func getMovieDetail(id : Int, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void)
     func getMovieVideo(id : Int, success: @escaping (MovieVideoVO) -> Void, fail: @escaping (String) -> Void)
     func addMovieToRated(id : Int, sessionId : String, success: @escaping (UpdateResponse) -> Void, fail: @escaping (String) -> Void)
