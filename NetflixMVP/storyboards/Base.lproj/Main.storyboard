@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6v9-js-YHG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6v9-js-YHG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieListViewController" customModule="NetflixMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Tu-n1-4CF">
@@ -49,7 +49,7 @@
             <objects>
                 <viewController id="J9Y-8x-8JK" customClass="MovieSearchViewController" customModule="NetflixMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JoK-t5-gCt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3HI-9v-SC0">
@@ -528,7 +528,7 @@ If you have any questions If you have any questions If you have any questions If
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="XkW-Ml-j69" customClass="LoginViewController" customModule="NetflixMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vHK-vu-3pr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-Bw-HLq">
@@ -647,7 +647,7 @@ If you have any questions If you have any questions If you have any questions If
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="3M8-fH-bOy" customClass="ProfileViewController" customModule="NetflixMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIr-kS-eBc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-ai-uV3">
@@ -852,19 +852,19 @@ If you have any questions If you have any questions If you have any questions If
         </scene>
     </scenes>
     <resources>
-        <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="logo" width="318" height="318"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="netfilx-64" width="64" height="64"/>
         <image name="netflix-banner" width="2500" height="673.5"/>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="play.fill" catalog="system" width="58" height="64"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tour1" width="1080" height="1350"/>
         <image name="user-128" width="128" height="128"/>
-        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="primary-color">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>

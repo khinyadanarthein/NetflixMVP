@@ -17,7 +17,7 @@ class MovieDetailPresenterImpl {
     
     let bag:DisposeBag = DisposeBag()
     var mView: MovieDetailView? = nil
-    let model : DataModel = DataModelImpl.shared
+    var model : DataModel = DataModelImpl.shared
 }
 
 extension MovieDetailPresenterImpl : MovieDetailPresenter {
