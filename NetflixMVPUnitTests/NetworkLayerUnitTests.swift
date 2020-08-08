@@ -13,6 +13,15 @@ import Foundation
 @testable import Alamofire
 @testable import RxSwift
 
+
+/**
+ 
+ Test Case တိုင်းအတွက် Object Instantiation ပြန်ရေးဖို့မလို => Refactor လုပ်လို့ရ
+ Check DetailPresenterImplTest.swift file for reference
+ 
+ */
+
+
 class NetflixMVPUnitTests: XCTestCase {
     
     let bag:DisposeBag = DisposeBag()

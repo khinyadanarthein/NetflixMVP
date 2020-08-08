@@ -13,6 +13,24 @@ import Foundation
 @testable import RxSwift
 @testable import NetflixMVP
 
+
+
+/**
+ 
+ 
+ Mock Object သည် TestCase မဟုတ်ပါ။
+ For Example,
+ class MockRealmHelper: Dao {}
+ 
+ 
+ Test လုပ်မယ့် Class File သာလျှင် XCTestCase ကို extends လုပ်သင့်
+ For Example,
+ class TestRealmHelper: XCTestCase {}
+ 
+ 
+ */
+
+
 class MockRealmHelper: XCTestCase {
      
     static let shared:MockRealmHelper = MockRealmHelper()

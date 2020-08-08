@@ -6,6 +6,31 @@
 //  Copyright © 2020 Khin Yadanar Thein. All rights reserved.
 //
 
+
+
+
+/**
+ 
+ 
+ SearchViewController ကို Test လုပ်ချင်တယ်ဆိုရင် သက်ဆိုင် Object တွေကို Mock လုပ်ပေးရမယ်။
+ For Example,
+ 
+ class TestSearchViewController: XCTestCase {
+    
+    //Initialize SearchViewController
+    let vc = SearchViewController() //Dependency ရှိရင် Inject လုပ်ပေးရမယ်။ အမြင်သာဆုံးက Presenter ဖြစ်မယ်။
+ 
+    func test_xxx {
+ 
+    }
+ }
+
+ လက်ရှိ SearchViewController မှာ Test လုပ်စရာ Logic ကြီးကြီးမားမားမရှိ
+ 
+ viewDidLoad => Object Instantiate လုပ်ရင်ခေါ်တဲ့အတွက် စမ်းလို့ရ
+ mPresenter နဲ့သက်ဆိုင်တဲ့ Method တွေခေါ်/မခေါ်စမ်းဖို့အတွက် Presenter ကို Mock လုပ်ဖို့လို
+ ကျန်တဲ့ statement တွေသည် framework component ဖြစ်တဲ့အတွက် Test လုပ်ဖို့မလို။ ဥပမာ self.present | view.addSubView | etc...
+ */
 import UIKit
 import XCTest
 @testable import RxSwift
@@ -74,12 +99,19 @@ extension MockSearchViewController: MovieSearchView {
     }
     
     func navigateToMovieDetail(movie: MovieDetailVO) {
-        let vc = MockDetailViewController()
+        
+        /**
+         
+         navigateToMovieDetail method implementation already exists in SearchViewController
+         ခုဒီမှာ Logic တွေကို ပြန်ရေးထားသလိုဖြစ်နေတယ်။
+         
+         */
+        //        let vc = MockDetailViewController()
         //if let vc = vc {
-            vc.movie = movie
-            XCTAssertEqual(movie.id, 547016)
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+        //            vc.movie = movie
+        //            XCTAssertEqual(movie.id, 547016)
+        //            vc.modalPresentationStyle = .fullScreen
+        //            self.present(vc, animated: true, completion: nil)
         //}
     }
     

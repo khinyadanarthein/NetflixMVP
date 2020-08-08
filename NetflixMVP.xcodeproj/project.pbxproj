@@ -1234,7 +1234,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1253,7 +1253,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1272,7 +1272,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVPUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1293,7 +1293,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVPUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1313,7 +1313,7 @@
 			baseConfigurationReference = CCAB0E58BD8376A01B23A089 /* Pods-NetflixMVPUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1333,7 +1333,7 @@
 			baseConfigurationReference = 77B21D8241142BC17C279474 /* Pods-NetflixMVPUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398G994Z67;
+				DEVELOPMENT_TEAM = J8KK28846H;
 				INFOPLIST_FILE = NetflixMVPUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

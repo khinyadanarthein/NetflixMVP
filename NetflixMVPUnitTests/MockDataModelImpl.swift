@@ -11,12 +11,33 @@ import RxSwift
 import XCTest
 @testable import NetflixMVP
 
+/**
+
+
+Mock Object သည် TestCase မဟုတ်ပါ။
+For Example,
+class MockDataModelImpl: DataModel {}
+
+
+Test လုပ်မယ့် Class File သာလျှင် XCTestCase ကို extends လုပ်သင့်
+For Example,
+class TestDataModel: XCTestCase {}
+
+
+*/
+
+
+struct MockError: Error {
+    var localizedDescription: String = "Sample Error Message"
+}
+
 class MockDataModelImpl : XCTestCase {
 
     static let shared:MockDataModelImpl = MockDataModelImpl()
-    let mockApi:MovieApi = MockMovieApiClient.shared
+    let mockApi:MovieApi = MockMovieApiClient()
     let mockdb :Dao = MockRealmHelper.shared
     let bag:DisposeBag = DisposeBag()
+    var shouldReturnErrorData = false
 }
 extension MockDataModelImpl : DataModel {
     
@@ -127,9 +148,17 @@ extension MockDataModelImpl : DataModel {
     }
     
     func getSimilarMovieObservable() -> Observable<[SimilarMovieVO]> {
-        let data = mockdb.getSimilarMovies()
-        XCTAssertNotNil(data)
-        return data
+        if shouldReturnErrorData {
+            return Observable.create { (observer) -> Disposable in
+                observer.onError(MockError())
+                observer.onCompleted()
+                return Disposables.create()
+            }
+        } else {
+            let data = mockdb.getSimilarMovies()
+            XCTAssertNotNil(data)
+            return data
+        }
     }
     
     func deleteSimilarMovie() {
